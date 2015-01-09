@@ -10,7 +10,7 @@
 		</div><!-- .col-width -->
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer clearfix" role="contentinfo">
 		<div class="col-width">
 
 			<?php if ( has_nav_menu( 'footer' ) ) : ?>

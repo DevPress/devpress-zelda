@@ -1,4 +1,4 @@
-# Copyright (C) 2014 DevPress
+# Copyright (C) 2015 DevPress
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.4.9\n"
@@ -120,12 +120,16 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:99 inc/customizer-options.php:215
+#: functions.php:99 inc/customizer-options.php:224
 msgid "Footer"
 msgstr ""
 
 #: header.php:23
 msgid "Skip to content"
+msgstr ""
+
+#: header.php:30
+msgid "Menu"
 msgstr ""
 
 #: inc/customizer-library/extensions/fonts.php:115
@@ -220,43 +224,43 @@ msgstr ""
 msgid "Primary Font"
 msgstr ""
 
-#: inc/customizer-options.php:130
+#: inc/customizer-options.php:130 inc/customizer-options.php:139
 msgid "Secondary Font"
 msgstr ""
 
-#: inc/customizer-options.php:142
+#: inc/customizer-options.php:151
 msgid "Archive"
 msgstr ""
 
-#: inc/customizer-options.php:148
+#: inc/customizer-options.php:157
 msgid "Display Excerpts"
 msgstr ""
 
-#: inc/customizer-options.php:149
+#: inc/customizer-options.php:158
 msgid "Display excerpts instead of full content."
 msgstr ""
 
-#: inc/customizer-options.php:157 inc/customizer-options.php:182
+#: inc/customizer-options.php:166 inc/customizer-options.php:191
 msgid "Display Featured Images"
 msgstr ""
 
-#: inc/customizer-options.php:168
+#: inc/customizer-options.php:177
 msgid "Post"
 msgstr ""
 
-#: inc/customizer-options.php:174
+#: inc/customizer-options.php:183
 msgid "Display Post Dates"
 msgstr ""
 
-#: inc/customizer-options.php:196
+#: inc/customizer-options.php:205
 msgid "Easy Digital Downloads"
 msgstr ""
 
-#: inc/customizer-options.php:202
+#: inc/customizer-options.php:211
 msgid "Display downloads on front page."
 msgstr ""
 
-#: inc/customizer-options.php:221
+#: inc/customizer-options.php:230
 msgid "Footer Text"
 msgstr ""
 

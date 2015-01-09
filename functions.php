@@ -124,6 +124,7 @@ function zelda_fonts() {
 
 	$fonts[1] = get_theme_mod( 'primary-font', customizer_library_get_default( 'primary-font' ) );
 	$fonts[2] = get_theme_mod( 'secondary-font', customizer_library_get_default( 'secondary-font' ) );
+	$fonts[3] = get_theme_mod( 'navigation-font', customizer_library_get_default( 'navigation-font' ) );
 
 	$font_uri = customizer_library_get_google_font_uri( $fonts );
 

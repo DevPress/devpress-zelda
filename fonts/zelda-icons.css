@@ -4,7 +4,7 @@
 	src:url('zelda-icons.eot?#v1') format('embedded-opentype'),
 		url('zelda-icons.woff?v1') format('woff'),
 		url('zelda-icons.ttf?v1') format('truetype'),
-		url('zelda-icons.svg?v1#zelda') format('svg');
+		url('zelda-icons.svg?v1#focus') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -98,4 +98,22 @@
 }
 .zelda-icon-caret-down:before {
 	content: "\f0d7";
+}
+.zelda-icon-user:before {
+	content: "\f007";
+}
+.zelda-icon-clock:before {
+	content: "\f017";
+}
+.zelda-icon-tag:before {
+	content: "\f02b";
+}
+.zelda-icon-comments:before {
+	content: "\f086";
+}
+.icon-chevron-left:before {
+	content: "\f053";
+}
+.icon-chevron-right:before {
+	content: "\f054";
 }

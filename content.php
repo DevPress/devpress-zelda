@@ -13,11 +13,11 @@
 		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 	</header><!-- .entry-header -->
 
+	<?php if ( has_post_thumbnail() && get_theme_mod( 'post-featured-images', 1 ) ) { ?>
 	<figure class="entry-image">
-		<a href="<?php the_permalink() ?>" class="thumbnail">
 		<?php the_post_thumbnail(); ?>
-		</a>
 	</figure>
+	<?php } ?>
 
 	<div class="entry-content clearfix">
 	<?php if ( is_search() || get_theme_mod( 'archive-excerpts', 0 ) ) :

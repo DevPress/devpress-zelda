@@ -65,30 +65,30 @@ big {
 --------------------------------------------------------------*/
 
 hr {
-	background-color: #ccc;
+	background-color: #eee;
 	border: 0;
 	height: 1px;
-	margin-bottom: 1em;
+	margin-bottom: 15px;
 }
 ul, ol {
-	list-style-position: outside;
-	margin: 0 0 1em 1.5em;
+	margin: 0 0 15px 0px;
 }
 ul {
-	list-style: disc;
+	list-style: inside disc;
 }
 ol {
-	list-style: decimal;
+	list-style: inside decimal;
 }
 li > ul,
 li > ol {
 	margin-bottom: 0;
+	margin-left: 20px;
 }
 dt {
 	font-weight: bold;
 }
 dd {
-	margin: 0 1.5em 1em;
+	margin: 0 15px 15px;
 }
 img {
 	height: auto; /* Make sure images are scaled correctly. */
@@ -120,7 +120,7 @@ th, td {
 --------------------------------------------------------------*/
 
 label {
-	font-size: $secondary-font-size;
+	font-size: 12px;
 	cursor: pointer;
 	display: block;
 }

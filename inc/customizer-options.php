@@ -131,7 +131,16 @@ function zelda_options() {
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => customizer_library_get_font_choices(),
-		'default' => 'Oswald'
+		'default' => 'Goudy Bookletter 1911'
+	);
+
+	$options['navigation-font'] = array(
+		'id' => 'secondary-font',
+		'label'   => __( 'Secondary Font', 'zelda' ),
+		'section' => $section,
+		'type'    => 'select',
+		'choices' => customizer_library_get_font_choices(),
+		'default' => 'Raleway'
 	);
 
 	// Archive Settings

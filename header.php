@@ -22,21 +22,21 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'zelda' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header clearfix" role="banner">
 
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
-		<nav id="primary-navigation" class="main-navigation clearfix" role="navigation">
-			<div class="col-width">
-				<button class="menu-toggle" data-toggle="#primary-navigation .menu">
-					<?php echo esc_html( zelda_get_menu_name( 'primary' ) ); ?>
-				</button>
-				<?php wp_nav_menu( array(
-					'theme_location' => 'primary',
-					'link_before' => '<span>',
-					'link_after' => '</span>'
-				) ); ?>
-			</div>
-		</nav>
+			<nav class="primary-navigation" role="navigation">
+				<div class="navigation-col-width">
+					<div class="menu-toggle"><?php _e( 'Menu', 'focus' ); ?></div>
+					<?php wp_nav_menu( array(
+						'theme_location' => 'primary',
+						'menu_class' => 'nav-menu',
+						'container_class' => 'menu-container',
+						'link_before' => '<span>',
+						'link_after' => '</span>'
+					) ); ?>
+				</div>
+			</nav>
 		<?php endif; ?>
 
 		<div class="site-branding">
@@ -63,22 +63,7 @@
 			</div>
 		</div>
 
-		<?php if ( has_nav_menu( 'secondary' ) ) : ?>
-		<nav id="secondary-navigation" class="main-navigation clearfix" role="navigation">
-			<div class="col-width">
-				<button class="menu-toggle" data-toggle="#secondary-navigation .menu">
-					<?php echo esc_html( zelda_get_menu_name( 'secondary' ) ); ?>
-				</button>
-				<?php wp_nav_menu( array(
-					'theme_location' => 'secondary',
-					'link_before' => '<span>',
-					'link_after' => '</span>'
-				) ); ?>
-			</div>
-		</nav>
-		<?php endif; ?>
-
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content clear">
+	<div id="content" class="site-content clearfix">
 		<div class="col-width">
