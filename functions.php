@@ -159,6 +159,14 @@ function zelda_scripts() {
 	if ( SCRIPT_DEBUG || WP_DEBUG ) :
 
 		wp_enqueue_script(
+			'zelda-fast-click',
+			get_template_directory_uri() . '/js/jquery.fastclick.js',
+			array(),
+			ZELDA_VERSION,
+			true
+		);
+
+		wp_enqueue_script(
 			'zelda-skip-link-focus-fix',
 			get_template_directory_uri() . '/js/skip-link-focus-fix.js',
 			array(),
@@ -175,8 +183,8 @@ function zelda_scripts() {
 		);
 
 		wp_enqueue_script(
-			'zelda-global',
-			get_template_directory_uri() . '/js/global.js',
+			'zelda-theme',
+			get_template_directory_uri() . '/js/theme.js',
 			array( 'jquery', 'zelda-fitvids' ),
 			ZELDA_VERSION,
 			true

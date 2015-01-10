@@ -44,9 +44,10 @@ module.exports = function(grunt) {
 		    build: {
 		        src: [
 		            'js/skip-link-focus-fix.js',
+		            'js/jquery.fastclick.js',
 		            'js/jquery.fittext.js',
-		            'js/jquery.fitvids.js',
-		            'js/global.js'
+		            'js/jquery-placeholder.js',
+		            'js/theme.js'
 		        ],
 		        dest: 'js/zelda.min.js',
 		    }

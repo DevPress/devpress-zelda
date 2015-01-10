@@ -24,44 +24,40 @@
 
 	<header id="masthead" class="site-header clearfix" role="banner">
 
-		<?php if ( has_nav_menu( 'primary' ) ) : ?>
-			<nav class="primary-navigation" role="navigation">
-				<div class="navigation-col-width">
-					<div class="menu-toggle"><?php _e( 'Menu', 'focus' ); ?></div>
-					<?php wp_nav_menu( array(
-						'theme_location' => 'primary',
-						'menu_class' => 'nav-menu',
-						'container_class' => 'menu-container',
-						'link_before' => '<span>',
-						'link_after' => '</span>'
-					) ); ?>
-				</div>
-			</nav>
-		<?php endif; ?>
-
 		<div class="site-branding">
-			<div class="col-width">
+			<?php if ( get_theme_mod( 'logo', 0 ) ) {
+				$class = 'site-logo';
+				$output = '<img src="' . esc_url( get_theme_mod( 'logo' ) ) . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '">';
+			} else {
+				$class = 'site-title';
+				$output = get_bloginfo( 'name' );
+			} ?>
 
-				<?php if ( get_theme_mod( 'logo', 0 ) ) {
-					$class = 'site-logo';
-					$output = '<img src="' . esc_url( get_theme_mod( 'logo' ) ) . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '">';
-				} else {
-					$class = 'site-title';
-					$output = get_bloginfo( 'name' );
-				} ?>
+			<h1 class="<?php echo esc_attr( $class ); ?>">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<?php echo $output; ?>
+				</a>
+			</h1>
 
-				<h1 class="<?php echo esc_attr( $class ); ?>">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<?php echo $output; ?>
-					</a>
-				</h1>
-
-				<?php if ( get_bloginfo( 'description' ) != '' ) : ?>
-					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-				<?php endif; ?>
-
-			</div>
+			<?php if ( get_bloginfo( 'description' ) != '' ) : ?>
+				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			<?php endif; ?>
 		</div>
+
+		<?php if ( has_nav_menu( 'primary' ) ) : ?>
+		<nav class="primary-navigation" role="navigation">
+			<div class="navigation-col-width">
+				<div class="menu-toggle"><?php _e( 'Menu', 'focus' ); ?></div>
+				<?php wp_nav_menu( array(
+					'theme_location' => 'primary',
+					'menu_class' => 'nav-menu',
+					'container_class' => 'menu-container',
+					'link_before' => '<span>',
+					'link_after' => '</span>'
+				) ); ?>
+			</div>
+		</nav>
+		<?php endif; ?>
 
 	</header><!-- #masthead -->
 

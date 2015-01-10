@@ -394,13 +394,6 @@ body {
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   word-wrap: break-word;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -414,15 +407,15 @@ h1 {
 }
 
 h2 {
-  font-size: 29px;
+  font-size: 32px;
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 h4, h5, h6 {
-  font-size: 18px;
+  font-size: 22px;
 }
 
 a {
@@ -445,9 +438,6 @@ a:active {
   width: 96%;
   max-width: 1080px;
   margin: 0 auto;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 
 .content-area {
@@ -456,7 +446,6 @@ a:active {
 
 .site-main {
   background: #fff;
-  padding: 15px 0 0;
   position: relative;
 }
 
@@ -525,26 +514,17 @@ a:active {
 
 /* General Responsive Layout */
 @media screen and (max-width: 881px) {
-  #page .content-area {
-    float: none;
-    margin: 30px 0 0;
-  }
-
   #page .site-main {
     margin: 0;
-    padding: 0;
   }
 
   #page .site-content .secondary {
-    float: none;
+    clear: both;
     width: auto;
+    float: none;
   }
 }
 @media screen and (max-width: 510px) {
-  .single #page .content-area {
-    margin-top: 1px;
-  }
-
   .single #content .col-width {
     width: 100%;
   }
@@ -567,7 +547,7 @@ a:active {
 }
 
 .site-title {
-  font-size: 34px;
+  font-size: 38px;
   line-height: 1;
   margin: 0;
 }
@@ -588,7 +568,7 @@ a:active {
   font-size: 18px;
   line-height: 1;
   margin: 0;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .site-title,
@@ -596,15 +576,6 @@ a:active {
   font-weight: 600;
 }
 
-@media screen and (max-width: 881px) {
-  .site-branding {
-    text-align: center;
-  }
-
-  .site-title {
-    font-size: 48px;
-  }
-}
 /* Primary Navigation
 -------------------------------------------------------------- */
 .site-branding {
@@ -613,7 +584,7 @@ a:active {
 }
 
 .primary-navigation {
-  font-size: 15px;
+  font-size: 17px;
   font-family: "Goudy Bookletter 1911", Georgia, serif;
 }
 
@@ -661,7 +632,7 @@ a:active {
 }
 
 .dropdown-toggle:after {
-  font-family: 'focus-icons';
+  font-family: 'zelda-icons';
   font-size: 14px;
   line-height: 1;
   content: '\f0d7';
@@ -673,7 +644,6 @@ a:active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: pointer;
-  transition: -webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
 }
 
@@ -693,6 +663,8 @@ a:active {
   cursor: pointer;
   float: right;
   padding: 12px 10px 12px 0;
+  color: #fff;
+  font-weight: 600;
 }
 
 .menu-toggle:hover {
@@ -700,7 +672,7 @@ a:active {
 }
 
 .menu-toggle:before {
-  font-family: 'focus-icons';
+  font-family: 'zelda-icons';
   content: '\f0c9';
   speak: none;
   display: inline-block;
@@ -715,9 +687,7 @@ a:active {
 /* Small Screen Sizes */
 @media screen and (max-width: 1039px) {
   .dropdown-toggle.toggled:after {
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 }
 /* Large Screen Sizes */
@@ -730,10 +700,7 @@ a:active {
     clear: none;
     max-width: 50%;
     float: right;
-  }
-
-  .site-description-active .primary-navigation {
-    margin-top: 3px;
+    margin-top: 6px;
   }
 
   .primary-navigation .nav-menu {
@@ -771,14 +738,14 @@ a:active {
 
   .primary-navigation ul ul {
     display: none;
-    background: #fff;
+    background: #322222;
     position: absolute;
     width: 220px;
     left: 50%;
     margin-left: -110px;
     top: 45px;
     z-index: 99999;
-    border: 1px solid #eee;
+    border: 1px solid #1c0f08;
     border-radius: 3px;
   }
 
@@ -789,7 +756,7 @@ a:active {
     margin-left: -8px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid #EEE;
+    border-bottom: 8px solid #322222;
     content: "";
   }
 
@@ -803,7 +770,7 @@ a:active {
   }
 
   .primary-navigation ul ul a {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #1c0f08;
   }
 
   .primary-navigation ul ul a,
@@ -813,7 +780,7 @@ a:active {
   }
 
   .primary-navigation ul ul a:hover {
-    background: #f6f6f6;
+    background: #1c0f08;
   }
 
   .primary-navigation ul ul li:last-child a {
@@ -1082,16 +1049,31 @@ a:active {
 /* Post Formats
 --------------------------------------------------------------*/
 #content blockquote {
-  background: #f6f6f6;
-  margin: 0 0 20px;
-  padding: 20px;
-  border-left: 4px solid #F8F4F2;
+  border-left: 4px solid #1c0f08;
+  margin: 0 0 15px;
+  padding: 30px 30px 30px 90px;
+  position: relative;
+}
+
+#content blockquote:after {
+  content: '\201C';
+  font-family: 'Georgia', serif;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  color: #555;
+  position: absolute;
+  top: 28px;
+  left: 30px;
+  color: #d55c17;
 }
 
 #content blockquote cite {
   display: inline-block;
   margin-top: .5em;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 #content blockquote cite:before {
@@ -1101,10 +1083,6 @@ a:active {
 
 #content blockquote p:last-of-type {
   margin-bottom: 0;
-}
-
-.single #content blockquote {
-  font-size: 18px;
 }
 
 /* Search & 404
@@ -1135,9 +1113,9 @@ a:active {
 --------------------------------------------------------------*/
 .secondary .widget {
   padding: 15px 30px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   color: #c08d72;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .widget-title {
@@ -1168,7 +1146,6 @@ a:active {
 @media screen and (max-width: 881px) {
   .secondary .widget {
     margin-bottom: 0px;
-    padding: 15px 6%;
   }
 }
 /* Paging Navigation

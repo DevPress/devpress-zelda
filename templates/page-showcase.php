@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Showcase
+ * Template Name: Post Showcase
  *
  * The template for displays an alternative magazine layout.
  *
@@ -23,5 +23,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

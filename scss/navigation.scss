@@ -3,7 +3,7 @@
 	max-width: 75%;
 }
 .primary-navigation {
-	font-size: 15px;
+	font-size: 17px;
 	font-family: $secondary-font;
 }
 .primary-navigation ul {
@@ -48,7 +48,7 @@
 	cursor: pointer;
 }
 .dropdown-toggle:after {
-	font-family: 'focus-icons';
+	font-family: 'zelda-icons';
 	font-size:14px;
 	line-height: 1;
 	content: '\f0d7';
@@ -78,12 +78,14 @@
 	cursor: pointer;
 	float: right;
 	padding: 12px 10px 12px 0;
+	color: #fff;
+	font-weight: 600;
 }
 .menu-toggle:hover {
 	background:none;
 }
 .menu-toggle:before {
-    font-family: 'focus-icons';
+    font-family: 'zelda-icons';
     content: '\f0c9';
     speak: none;
     display: inline-block;
@@ -110,9 +112,9 @@
 		clear:none;
 		max-width: 50%;
 		float:right;
+		margin-top: 6px;
 	}
 	.site-description-active .primary-navigation {
-		margin-top: 3px;
 	}
 	.primary-navigation .nav-menu {
 		padding-top: 0;
@@ -142,14 +144,14 @@
 	}
 	.primary-navigation ul ul {
 		display: none;
-		background: #fff;
+		background: $background-color;
 		position: absolute;
 		width:220px;
 		left: 50%;
 		margin-left: -110px;
 		top:45px;
 		z-index: 99999;
-		border: 1px solid #eee;
+		border: 1px solid $outer-background;
 		border-radius: 3px;
 	}
 	.primary-navigation ul ul:before {
@@ -159,7 +161,7 @@
 		margin-left: -8px;
 		border-left: 8px solid rgba(0, 0, 0, 0);
 		border-right: 8px solid rgba(0, 0, 0, 0);
-		border-bottom: 8px solid #EEE;
+		border-bottom: 8px solid $background-color;
 		content: "";
 	}
 	.primary-navigation ul li:hover > ul {
@@ -170,7 +172,7 @@
 		margin:0;
 	}
 	.primary-navigation ul ul a {
-		border-bottom: 1px solid #eee;
+		border-bottom: 1px solid $outer-background;
 	}
 	.primary-navigation ul ul a,
 	.primary-navigation ul li:hover ul a {
@@ -178,7 +180,7 @@
 		padding:12px 20px;
 	}
 	.primary-navigation ul ul a:hover {
-		background: #f6f6f6;
+		background: $outer-background;
 	}
 	.primary-navigation ul ul li:last-child a {
 		border-bottom: none;

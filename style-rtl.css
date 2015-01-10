@@ -386,6 +386,11 @@ body.rtl {
 
 /* Theme Globals
 -------------------------------------------------------------- */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   font-family: Verdana, sans-serif;
   background: #322222;
@@ -450,8 +455,21 @@ a:active {
           flex: 1;
 }
 
+.site-content .col-width {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .content-area {
   width: 100%;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .site-main {
@@ -475,6 +493,9 @@ a:active {
 .site-content .secondary {
   overflow: hidden;
   width: 28%;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 /* No Sidebar */
