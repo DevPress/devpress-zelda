@@ -46,20 +46,17 @@
 
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
 		<nav class="primary-navigation" role="navigation">
-			<div class="navigation-col-width">
-				<div class="menu-toggle"><?php _e( 'Menu', 'focus' ); ?></div>
-				<?php wp_nav_menu( array(
-					'theme_location' => 'primary',
-					'menu_class' => 'nav-menu',
-					'container_class' => 'menu-container',
-					'link_before' => '<span>',
-					'link_after' => '</span>'
-				) ); ?>
-			</div>
+			<div class="menu-toggle"><?php _e( 'Menu', 'focus' ); ?></div>
+			<?php wp_nav_menu( array(
+				'theme_location' => 'primary',
+				'menu_class' => 'nav-menu',
+				'container_class' => 'menu-container',
+				'link_before' => '<span>',
+				'link_after' => '</span>'
+			) ); ?>
 		</nav>
 		<?php endif; ?>
 
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content clearfix">
-		<div class="col-width">

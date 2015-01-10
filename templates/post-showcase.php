@@ -10,17 +10,21 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
-			<div class="module">
-				<?php while ( have_posts() ) : the_post(); ?>
+		<?php
+		$args = array(
+			'posts_per_page' => 5,
+			'post_type' => 'post',
+		);
+		$query = new WP_Query( $args );
+		if ( $query->have_posts() ) :
+			$count = 0;
+			while ( $query->have_posts() ) : $query->the_post();
+				the_title();
+			endwhile;
+		endif;
+		?>
 
-					<?php get_template_part( 'content', 'page' ); ?>
-
-				<?php endwhile; // end of the loop. ?>
-			</div>
-
-		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>

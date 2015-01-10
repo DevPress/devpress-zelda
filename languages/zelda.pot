@@ -128,7 +128,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:30
+#: header.php:49
 msgid "Menu"
 msgstr ""
 
@@ -428,11 +428,11 @@ msgid "Zelda"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://devpress.com/zenith"
+msgid "https://devpress.com/zelda"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Zelda description."
+msgid "A responsive theme designed for business and magazine."
 msgstr ""
 
 #. Author of the plugin/theme
@@ -444,11 +444,11 @@ msgid "https://devpress.com"
 msgstr ""
 
 #. Template Name of the plugin/theme
-msgid "Full Width Page"
+msgid "Page Showcase"
 msgstr ""
 
 #. Template Name of the plugin/theme
-msgid "Showcase"
+msgid "Post Showcase"
 msgstr ""
 
 #: archive.php:29

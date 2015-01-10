@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Post Showcase
+ * Template Name: Page Showcase
  *
  * The template for displays an alternative magazine layout.
  *

@@ -1,14 +1,14 @@
 /*
 Theme Name: Zelda
-Theme URI: https://devpress.com/zenith
+Theme URI: https://devpress.com/zelda
 Author: DevPress
 Author URI: https://devpress.com
-Description: Zelda description.
+Description: A responsive theme designed for business and magazine.
 Version: 0.3.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: cascade
-Tags: responsive-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, microformats, post-formats, theme-options, threaded-comments, translation-ready
+Text Domain: zelda
+Tags: responsive-layout, one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, microformats, post-formats, theme-options, threaded-comments, translation-ready
 
 */
 
@@ -35,7 +35,7 @@ body {
 	background: $background-color;
 	color: #333;
 	font-size: $primary-font-size;
-	line-height: 1.4;
+	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
 	word-wrap: break-word;
 }
@@ -155,16 +155,6 @@ a:active {
 		clear: both;
 		width: auto;
 		float: none;
-	}
-}
-
-@media screen and (max-width:510px) {
-	.single #content .col-width {
-		width: 100%;
-	}
-	.single.sidebar-right .site-content .secondary {
-		margin:0;
-		margin-top:1px;
 	}
 }
 
@@ -393,6 +383,14 @@ a:active {
   margin-bottom: 0;
 }
 
+/* Page Templates
+--------------------------------------------------------------*/
+
+.page-template-post-showcase .content-area {
+	background: #f8f8f8;
+	padding: 30px;
+}
+
 /* Search & 404
 --------------------------------------------------------------*/
 
@@ -493,7 +491,7 @@ a:active {
 --------------------------------------------------------------*/
 
 #comments {
-	border-top: 1px solid #f0f0f0;
+	border-bottom: 3px double #eee;
 }
 .comments-title {
 	padding:30px 30px 0;
@@ -515,7 +513,7 @@ a:active {
 	margin:0;
 	padding:30px;
 	list-style: none;
-	border-bottom: 1px solid #F0F0F0;
+	border-bottom: 3px double #eee;
 }
 .comment-list .children {
 	list-style: none;
@@ -653,66 +651,15 @@ a:active {
 /* Footer
 --------------------------------------------------------------*/
 
-.footer-widgets {
-	padding: 30px 0;
-}
-.footer-widgets .widget-title {
-	padding-bottom:10px;
-}
+
 #colophon {
-	font-size: 14px;
+	font-size: 13px;
 	padding: 20px 30px;
 	background: $outer-background;
 	color: $footer-color;
 }
 #colophon a {
 	color: $outer-link-color;
-}
-
-@media screen and (min-width:510px) and (max-width:880px) {
-
-	.footer-widgets.columns-2 .widget,
-	.footer-widgets.columns-3 .widget {
-		width:45%;
-		margin-right:10%;
-		float:left;
-	}
-	.footer-widgets.columns-2 .widget:nth-of-type(2n),
-	.footer-widgets.columns-3 .widget:nth-of-type(2n) {
-		margin-right:0;
-	}
-
-}
-
-@media screen and (min-width:881px) {
-	.footer-widgets.columns-2 .widget {
-		width:45%;
-		margin-right:10%;
-		float:left;
-	}
-	.footer-widgets.columns-2 .widget:nth-of-type(2n) {
-		margin-right:0;
-	}
-	.footer-widgets.columns-3 .widget {
-		width:30%;
-		margin-right:5%;
-		float:left;
-	}
-	.footer-widgets.columns-3 .widget:nth-of-type(3n) {
-		margin-right:0;
-	}
-
-}
-
-@media screen and (max-width:510px) {
-	.footer-widgets .widget {
-		margin-bottom:15px;
-	}
-	.footer-widgets .col-width,
-	#colophon .col-width {
-		padding-right: 30px;
-		padding-left: 30px;
-	}
 }
 
 /* Accessibility

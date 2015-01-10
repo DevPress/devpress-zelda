@@ -19,7 +19,7 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 
 ## Change Log
 
-0.1.0
+1.0.0
 ===
 
 * First release
