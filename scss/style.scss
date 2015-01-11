@@ -32,7 +32,7 @@ body.rtl {
 
 body {
 	font-family: $primary-font;
-	background: $background-color;
+	background: $primary-background-color;
 	color: #333;
 	font-size: $primary-font-size;
 	line-height: 1.5;
@@ -57,7 +57,7 @@ h4, h5, h6 {
 	font-size: 22px;
 }
 a {
-	color: $link-color;
+	color: $primary-link-color;
 	text-decoration: none;
 	transition: all 0.2s ease;
 	word-wrap: break-word;
@@ -72,7 +72,7 @@ a:active {
 -------------------------------------------------------------- */
 
 #page {
-	background: $outer-background;
+	background: $seconday-background-color;
 	width:96%;
 	max-width:1080px;
 	margin:0 auto;
@@ -184,7 +184,7 @@ a:active {
 	line-height: 1;
 }
 .site-description {
-	color: $outer-text-color;
+	color: $secondary-text-color;
 	font-size: 18px;
 	line-height: 1;
 	margin:0;
@@ -351,7 +351,7 @@ a:active {
 --------------------------------------------------------------*/
 
 #content blockquote {
-	border-left: 4px solid $outer-background;
+	border-left: 4px solid $seconday-background-color;
 	margin: 0 0 15px;
 	padding: 30px 30px 30px 90px;
 	position: relative;
@@ -368,7 +368,7 @@ a:active {
 	position: absolute;
 	top: 28px;
 	left: 30px;
-	color: $link-color;
+	color: $primary-link-color;
 }
 #content blockquote cite {
   display: inline-block;
@@ -419,16 +419,16 @@ a:active {
 .secondary .widget {
 	padding:15px 30px;
 	margin-bottom:15px;
-	color: $outer-text-color;
+	color: $secondary-text-color;
 	font-size: 14px;
 }
 .widget-title {
-	border-bottom: 3px double $outer-text-color;
+	border-bottom: 3px double $secondary-text-color;
 	padding-bottom: 5px;
 	margin-bottom: 15px;
 }
 .widget a {
-	color: $outer-link-color;
+	color: $secondary-link-color;
 }
 /* Make sure select elements fit in widgets */
 .widget select {
@@ -655,11 +655,11 @@ a:active {
 #colophon {
 	font-size: 13px;
 	padding: 20px 30px;
-	background: $outer-background;
-	color: $footer-color;
+	background: $seconday-background-color;
+	color: $secondary-text-color;
 }
 #colophon a {
-	color: $outer-link-color;
+	color: $secondary-link-color;
 }
 
 /* Accessibility

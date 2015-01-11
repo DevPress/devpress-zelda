@@ -144,14 +144,14 @@
 	}
 	.primary-navigation ul ul {
 		display: none;
-		background: $background-color;
+		background: $primary-background-color;
 		position: absolute;
 		width:220px;
 		left: 50%;
 		margin-left: -110px;
 		top:45px;
 		z-index: 99999;
-		border: 1px solid $outer-background;
+		border: 1px solid $seconday-background-color;
 		border-radius: 3px;
 	}
 	.primary-navigation ul ul:before {
@@ -161,7 +161,7 @@
 		margin-left: -8px;
 		border-left: 8px solid rgba(0, 0, 0, 0);
 		border-right: 8px solid rgba(0, 0, 0, 0);
-		border-bottom: 8px solid $background-color;
+		border-bottom: 8px solid $primary-background-color;
 		content: "";
 	}
 	.primary-navigation ul li:hover > ul {
@@ -172,7 +172,7 @@
 		margin:0;
 	}
 	.primary-navigation ul ul a {
-		border-bottom: 1px solid $outer-background;
+		border-bottom: 1px solid $seconday-background-color;
 	}
 	.primary-navigation ul ul a,
 	.primary-navigation ul li:hover ul a {
@@ -180,7 +180,7 @@
 		padding:12px 20px;
 	}
 	.primary-navigation ul ul a:hover {
-		background: $outer-background;
+		background: $seconday-background-color;
 	}
 	.primary-navigation ul ul li:last-child a {
 		border-bottom: none;
