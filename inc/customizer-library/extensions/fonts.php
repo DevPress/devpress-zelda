@@ -161,9 +161,9 @@ function customizer_library_choose_google_font_variants( $font, $variants = arra
 		$chosen_variants[] = 'italic';
 	}
 
-	// Only add "700" if it exists
-	if ( in_array( '700', $variants ) ) {
-		$chosen_variants[] = '700';
+	// Only add "900" if it exists
+	if ( in_array( '800', $variants ) ) {
+		$chosen_variants[] = '800';
 	}
 
 	return apply_filters( 'customizer_library_font_variants', array_unique( $chosen_variants ), $font, $variants );

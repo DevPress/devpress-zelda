@@ -23,7 +23,7 @@ get_header(); ?>
 			while ( $query->have_posts() ) : $query->the_post();
 			$thumbnail = array( 250, 250, true );
 
-			if ( $count == 1 ) {
+			if ( 1 == $count ) {
 				$thumbnail = null;
 			}
 			?>
@@ -38,14 +38,24 @@ get_header(); ?>
 
 					<header class="entry-header">
 						<div class="entry-meta entry-header-meta">
-							<?php zelda_posted_on(); ?>
+							<?php zelda_posted_on( array( 'date' ) ); ?>
 						</div><!-- .entry-meta -->
 						<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 					</header><!-- .entry-header -->
 
+					<?php if ( 1 == $count ) : ?>
 					<div class="entry-summary clearfix">
 						<?php the_excerpt(); ?>
 					</div><!-- .entry-content -->
+					<?php endif; ?>
+
+					<?php if ( 1 != $count ) : ?>
+					<p class="read-more">
+						<a href="<?php get_permalink(); ?>">
+							<?php _e( 'Read More', 'zelda' ); ?>
+						</a>
+					</p>
+					<?php endif; ?>
 
 				</article><!-- #post-## -->
 

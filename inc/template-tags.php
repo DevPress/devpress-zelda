@@ -65,7 +65,7 @@ if ( ! function_exists( 'zelda_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function zelda_posted_on() {
+function zelda_posted_on( $args = array( 'date', 'byline' ) ) {
 
 	if ( get_theme_mod( 'display-post-dates', 1 ) ) :
 
@@ -86,8 +86,13 @@ function zelda_posted_on() {
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span>';
-		echo '<span class="byline"> ' . $byline . '</span>';
+		if ( in_array( 'date', $args ) ):
+			echo '<span class="posted-on">' . $posted_on . '</span>';
+		endif;
+
+		if ( in_array( 'byline', $args ) ):
+			echo '<span class="byline"> ' . $byline . '</span>';
+		endif;
 
 	endif;
 

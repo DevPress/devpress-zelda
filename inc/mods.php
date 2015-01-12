@@ -138,3 +138,15 @@ function zelda_display_favicons() {
 }
 endif;
 add_action( 'wp_head', 'zelda_display_favicons' );
+
+/**
+ * Custom Read More
+ *
+ * @since Zelda 0.1
+ */
+
+function zelda_excerpt_more( $more ) {
+   global $post;
+   return '<p class="read-more"><a href="' . get_permalink( $post->ID ) . '">' . __( 'Read More', 'zelda' ) . '</a></p>';
+}
+add_filter( 'excerpt_more', 'zelda_excerpt_more' );

@@ -4,7 +4,7 @@
 }
 .primary-navigation {
 	font-size: 17px;
-	font-family: $secondary-font;
+	font-family: $tertiary-font;
 }
 .primary-navigation ul {
 	display: none;
@@ -113,6 +113,10 @@
 		max-width: 50%;
 		float:right;
 		margin-top: 6px;
+		font-weight: 800;
+		letter-spacing: -.01em;
+		font-size:17px;
+		text-transform: uppercase;
 	}
 	.site-description-active .primary-navigation {
 	}
@@ -131,16 +135,15 @@
 	}
 	.primary-navigation li {
 		display: inline-block;
-		margin-right:10px;
 	}
 	.primary-navigation a {
 		display: inline-block;
 		border: none;
-		font-size:18px;
-		font-weight: 600;
+		border-left: 1px solid $secondary-text-color;
+		padding: 10px 16px;
 	}
 	.primary-navigation .menu-item-has-children > a {
-		padding: 12px 10px;
+		padding: 10px 16px;
 	}
 	.primary-navigation ul ul {
 		display: none;
@@ -153,6 +156,10 @@
 		z-index: 99999;
 		border: 1px solid $seconday-background-color;
 		border-radius: 3px;
+		font-size: 16px;
+		text-align: center;
+		font-weight: 400;
+		text-transform: none;
 	}
 	.primary-navigation ul ul:before {
 		position: absolute;
@@ -172,6 +179,7 @@
 		margin:0;
 	}
 	.primary-navigation ul ul a {
+		border: none;
 		border-bottom: 1px solid $seconday-background-color;
 	}
 	.primary-navigation ul ul a,
