@@ -9,70 +9,34 @@
 
 get_header(); ?>
 
-	<?php if ( is_category() || is_tag() || is_author() || is_day() || is_year() ) : ?>
-	<header class="page-header">
-		<h1 class="page-title">
-		<?php
-		if ( is_category() ) :
-			single_cat_title();
-
-		elseif ( is_tag() ) :
-			single_tag_title();
-
-		elseif ( is_author() ) :
-			printf( __( 'Author: %s', 'zelda' ), '<span class="vcard">' . get_the_author() . '</span>' );
-
-		elseif ( is_day() ) :
-			printf( __( 'Day: %s', 'zelda' ), '<span>' . get_the_date() . '</span>' );
-
-		elseif ( is_month() ) :
-			printf( __( 'Month: %s', 'zelda' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'zelda' ) ) . '</span>' );
-
-		elseif ( is_year() ) :
-			printf( __( 'Year: %s', 'zelda' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'zelda' ) ) . '</span>' );
-
-		else :
-			_e( 'Archives', 'zelda' );
-
-		endif;
-		?>
-		</h1>
-	</header><!-- .page-header -->
-	<?php endif; ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+			<header class="page-header">
+			<?php
+				the_archive_title( '<h1 class="entry-title">', '</h1>' );
+				the_archive_description( '<div class="taxonomy-description">', '</div>' );
+			?>
+			</header><!-- .page-header -->
 
-			<div id="posts-wrap">
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php if ( have_posts() ) : ?>
 
-				<?php
-					$template = '';
-					$type = get_post_type();
+				<div id="posts-wrap">
+				<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-					if ( zelda_load_masonry() ) {
-						$template = 'masonry';
-						if ( 'download' == $type ) {
-							$template = 'masonry-download';
-						}
-					}
+					<?php get_template_part( 'content' ); ?>
 
-					get_template_part( 'content', zelda_template_part() );
-				?>
+				<?php endwhile; ?>
+				</div>
 
-			<?php endwhile; ?>
-			</div>
+				<?php zelda_paging_nav(); ?>
 
-			<?php zelda_paging_nav(); ?>
+			<?php else : ?>
 
-		<?php else : ?>
+				<?php get_template_part( 'content', 'none' ); ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
-
-		<?php endif; ?>
+			<?php endif; ?>
 
 		</main><!-- #main -->
 

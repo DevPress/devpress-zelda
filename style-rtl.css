@@ -392,7 +392,6 @@ body {
   color: #333;
   font-size: 14px;
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
   word-wrap: break-word;
 }
 
@@ -554,7 +553,7 @@ a:active {
 }
 
 .site-description {
-  color: #c08d72;
+  color: #604c40;
   font-size: 18px;
   line-height: 1;
   margin: 0;
@@ -575,7 +574,7 @@ a:active {
 
 .primary-navigation {
   font-size: 17px;
-  font-family: "Goudy Bookletter 1911", Georgia, serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .primary-navigation ul {
@@ -634,7 +633,6 @@ a:active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: pointer;
-  transition: -webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
 }
 
@@ -678,9 +676,7 @@ a:active {
 /* Small Screen Sizes */
 @media screen and (max-width: 1039px) {
   .dropdown-toggle.toggled:after {
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 }
 /* Large Screen Sizes */
@@ -694,6 +690,10 @@ a:active {
     max-width: 50%;
     float: left;
     margin-top: 6px;
+    font-weight: 800;
+    letter-spacing: -.01em;
+    font-size: 17px;
+    text-transform: uppercase;
   }
 
   .primary-navigation .nav-menu {
@@ -715,18 +715,17 @@ a:active {
 
   .primary-navigation li {
     display: inline-block;
-    margin-left: 10px;
   }
 
   .primary-navigation a {
     display: inline-block;
     border: none;
-    font-size: 18px;
-    font-weight: 600;
+    border-right: 1px solid #604c40;
+    padding: 10px 16px;
   }
 
   .primary-navigation .menu-item-has-children > a {
-    padding: 12px 10px;
+    padding: 10px 16px;
   }
 
   .primary-navigation ul ul {
@@ -740,6 +739,10 @@ a:active {
     z-index: 99999;
     border: 1px solid #1c0f08;
     border-radius: 3px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 400;
+    text-transform: none;
   }
 
   .primary-navigation ul ul:before {
@@ -763,6 +766,7 @@ a:active {
   }
 
   .primary-navigation ul ul a {
+    border: none;
     border-bottom: 1px solid #1c0f08;
   }
 
@@ -877,28 +881,27 @@ a:active {
   border-bottom: 3px double #eee;
 }
 
-.entry-header {
+.entry-header,
+.page-header {
   padding: 30px;
 }
 
-.entry-title,
-.page-title {
+.page-header {
+  border-bottom: 3px double #EEE;
+}
+
+.entry-title {
   font-size: 34px;
   color: #333;
   margin: 0;
 }
 
-.entry-title a,
-.page-title a {
+.entry-title a {
   color: #333;
 }
 
-.page-header {
-  background: #fff;
-  border-right: 5px solid #F8F4F2;
-  padding: 15px 30px;
-  margin: 30px 0 0;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+.entry-header .entry-meta {
+  text-transform: uppercase;
 }
 
 .entry-meta {
@@ -1080,17 +1083,14 @@ a:active {
 
 /* Page Templates
 --------------------------------------------------------------*/
-.page-template-post-showcase .content-area {
-  background: #f8f8f8;
-}
-
 .page-template-post-showcase .hentry {
   background: #fff;
-  border-bottom: none;
-  max-width: calc(25% - 37.5px );
-  float: right;
-  margin: 0 30px 30px 0;
   border-bottom: 1px solid #eee;
+  margin-bottom: 30px;
+}
+
+.page-template-post-showcase .content-area {
+  background: #f8f8f8;
 }
 
 .page-template-post-showcase .entry-image {
@@ -1098,33 +1098,41 @@ a:active {
   padding: 0;
 }
 
-.page-template-post-showcase .entry-header,
-.page-template-post-showcase .entry-summary {
-  padding: 15px;
+.page-template-post-showcase .entry-header {
+  padding: 0 15px;
+  margin: 0 0 10px;
+}
+
+.page-template-post-showcase .entry-meta {
+  font-size: 10px;
+  margin: 0 0 10px;
 }
 
 .page-template-post-showcase .entry-title {
+  font-size: 18px;
   line-height: 1.2;
 }
 
-.page-template-post-showcase .featured-1 {
-  max-width: 100%;
-  float: none;
-  margin: 0 0 30px;
+.page-template-post-showcase .read-more {
+  padding: 0 15px;
+  margin: 0 0 15px;
 }
 
-.page-template-post-showcase .featured-1 .entry-image {
-  float: right;
-  width: 60%;
-  margin: 0;
+.page-template-post-showcase .featured-1 .entry-meta {
+  font-size: 12px;
 }
 
-.page-template-post-showcase .featured-1 .entry-header,
+.page-template-post-showcase .featured-1 .entry-title {
+  font-size: 34px;
+}
+
 .page-template-post-showcase .featured-1 .entry-summary {
-  float: left;
-  width: 40%;
-  padding: 30px 30px 0;
-  margin: 0;
+  padding: 0 15px;
+  margin: 0 0 15px;
+}
+
+.page-template-post-showcase .featured-1 .read-more {
+  padding: 0;
 }
 
 .page-template-post-showcase .featured-1:after {
@@ -1133,6 +1141,61 @@ a:active {
   clear: both;
 }
 
+.read-more {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 881px) {
+  .page-template-post-showcase .hentry {
+    width: calc(25% - 37.5px );
+    float: right;
+    margin: 0 30px 30px 0;
+    min-height: 365px;
+  }
+
+  .page-template-post-showcase .featured-1 {
+    width: 100%;
+    float: none;
+    margin: 0 0 30px;
+  }
+
+  .page-template-post-showcase .featured-1 .entry-image {
+    float: right;
+    width: 55%;
+    margin: 0;
+  }
+
+  .page-template-post-showcase .featured-1 .entry-header,
+  .page-template-post-showcase .featured-1 .entry-summary {
+    float: left;
+    width: 45%;
+    padding: 30px 30px 0;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 880px) {
+  .page-template-post-showcase .hentry {
+    width: calc(50% - 45px );
+    float: right;
+    margin: 0 30px 30px 0;
+    min-height: 365px;
+  }
+
+  .page-template-post-showcase .featured-1 {
+    width: calc(100% - 60px );
+    float: none;
+    margin: 30px;
+  }
+
+  .page-template-post-showcase .featured-1 .entry-header {
+    padding: 15px 30px;
+  }
+
+  .page-template-post-showcase .featured-1 .entry-summary {
+    padding: 0 30px 30px;
+  }
+}
 /* Search & 404
 --------------------------------------------------------------*/
 .search-form label {
@@ -1162,12 +1225,16 @@ a:active {
 .secondary .widget {
   padding: 15px 30px;
   margin-bottom: 15px;
-  color: #c08d72;
+  color: #604c40;
   font-size: 14px;
 }
 
 .widget-title {
-  border-bottom: 3px double #c08d72;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  text-transform: uppercase;
+  border-bottom: 3px double #604c40;
   padding-bottom: 5px;
   margin-bottom: 15px;
 }
@@ -1434,7 +1501,7 @@ a:active {
   font-size: 13px;
   padding: 20px 30px;
   background: #1c0f08;
-  color: #c08d72;
+  color: #604c40;
 }
 
 #colophon a {

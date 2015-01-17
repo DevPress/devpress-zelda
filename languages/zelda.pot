@@ -32,31 +32,11 @@ msgstr ""
 msgid "The page you are looking for doesn't exist. Try a search?"
 msgstr ""
 
-#: archive.php:23
-msgid "Author: %s"
-msgstr ""
-
-#: archive.php:26
-msgid "Day: %s"
-msgstr ""
-
-#: archive.php:29
-msgid "Month: %s"
-msgstr ""
-
-#: archive.php:32
-msgid "Year: %s"
-msgstr ""
-
-#: archive.php:35
-msgid "Archives"
-msgstr ""
-
 #: comment.php:31
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: comment.php:52 content-page.php:24 inc/template-tags.php:129
+#: comment.php:52 content-page.php:24 inc/template-tags.php:134
 msgid "Edit"
 msgstr ""
 
@@ -120,7 +100,7 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:99 inc/customizer-options.php:224
+#: functions.php:99 inc/customizer-options.php:225
 msgid "Footer"
 msgstr ""
 
@@ -224,43 +204,47 @@ msgstr ""
 msgid "Primary Font"
 msgstr ""
 
-#: inc/customizer-options.php:130 inc/customizer-options.php:139
+#: inc/customizer-options.php:130
 msgid "Secondary Font"
 msgstr ""
 
-#: inc/customizer-options.php:151
+#: inc/customizer-options.php:139
+msgid "Tertiary Font"
+msgstr ""
+
+#: inc/customizer-options.php:152
 msgid "Archive"
 msgstr ""
 
-#: inc/customizer-options.php:157
+#: inc/customizer-options.php:158
 msgid "Display Excerpts"
 msgstr ""
 
-#: inc/customizer-options.php:158
+#: inc/customizer-options.php:159
 msgid "Display excerpts instead of full content."
 msgstr ""
 
-#: inc/customizer-options.php:166 inc/customizer-options.php:191
+#: inc/customizer-options.php:167 inc/customizer-options.php:192
 msgid "Display Featured Images"
 msgstr ""
 
-#: inc/customizer-options.php:177
+#: inc/customizer-options.php:178
 msgid "Post"
 msgstr ""
 
-#: inc/customizer-options.php:183
+#: inc/customizer-options.php:184
 msgid "Display Post Dates"
 msgstr ""
 
-#: inc/customizer-options.php:205
+#: inc/customizer-options.php:206
 msgid "Easy Digital Downloads"
 msgstr ""
 
-#: inc/customizer-options.php:211
+#: inc/customizer-options.php:212
 msgid "Display downloads on front page."
 msgstr ""
 
-#: inc/customizer-options.php:230
+#: inc/customizer-options.php:231
 msgid "Footer Text"
 msgstr ""
 
@@ -304,6 +288,10 @@ msgstr ""
 msgid "%1$s by %2$s."
 msgstr ""
 
+#: inc/mods.php:150 templates/post-showcase.php:55
+msgid "Read More"
+msgstr ""
+
 #: inc/template-tags.php:21
 msgid "Posts navigation"
 msgstr ""
@@ -320,7 +308,7 @@ msgstr ""
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:107 inc/template-tags.php:120
+#: inc/template-tags.php:112 inc/template-tags.php:125
 #. translators: used between list items, there is a space after the comma
 msgid ", "
 msgstr ""
@@ -411,7 +399,7 @@ msgid ""
 "href=\"%5$s\"%6$s>update now</a>."
 msgstr ""
 
-#: search.php:11
+#: search.php:17
 msgid "Search results for: %s"
 msgstr ""
 
@@ -449,16 +437,6 @@ msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "Post Showcase"
-msgstr ""
-
-#: archive.php:29
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr ""
-
-#: archive.php:32
-msgctxt "yearly archives date format"
-msgid "Y"
 msgstr ""
 
 #: comment.php:48
