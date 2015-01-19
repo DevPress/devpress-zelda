@@ -15,11 +15,11 @@ if ( ! function_exists( 'zelda_styles' ) && class_exists( 'Customizer_Library_St
  */
 function zelda_styles() {
 
-	// Primary Color
-	$setting = 'primary-color';
+	// Primary Link Color
+	$setting = 'primary-link-color';
 	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
 
-	if ( $mod !== customizer_library_get_default( $setting ) ) {
+	if ( $mod !== customizer_library_get_default( $setting ) ) :
 
 		$color = sanitize_hex_color( $mod );
 		$color_obj = new Jetpack_Color( $color );
@@ -28,25 +28,11 @@ function zelda_styles() {
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
 				'a',
-				'.site-title a',
+				'#content blockquote:after',
+				'button, .button, input[type="button"], input[type="reset"], input[type="submit"]'
 			),
 			'declarations' => array(
 				'color' => $color
-			)
-		) );
-
-		// Button Styling
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'button',
-				'.button',
-				'input[type="button"]',
-				'input[type="reset"]',
-				'input[type="submit"]',
-				'.masonry .entry-footer-meta a:hover'
-			),
-			'declarations' => array(
-				'background-color' => $color
 			)
 		) );
 
@@ -64,37 +50,94 @@ function zelda_styles() {
 			)
 		) );
 
-		// Border Colors
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'#content blockquote',
-				'.page-header'
-			),
-			'declarations' => array(
-				'border-color' => $mod
-			)
-		) );
+	endif;
 
-	}
-
-	// Secondary Color
-	$setting = 'secondary-color';
+	// Secondary Background Color
+	$setting = 'secondary-background-color';
 	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
 
-	if ( $mod !== customizer_library_get_default( $setting ) ) {
+	if ( $mod !== customizer_library_get_default( $setting ) ) :
 
-		// Colors
+		$color = sanitize_hex_color( $mod );
+
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.site-title a:hover',
-				'.bypostauthor .comment-author .fn:after'
+				'#page',
+				'#colophon',
+				'.primary-navigation ul ul a:hover'
 			),
 			'declarations' => array(
-				'color' => sanitize_hex_color( $color )
+				'background' => $color
 			)
 		) );
 
-	}
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.primary-navigation ul ul',
+				'.primary-navigation ul ul a',
+				'#content blockquote'
+			),
+			'declarations' => array(
+				'border-color' => $color
+			)
+		) );
+
+	endif;
+
+	// Secondary Text Color
+	$setting = 'secondary-text-color';
+	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
+
+	if ( $mod !== customizer_library_get_default( $setting ) ) :
+
+		$color = sanitize_hex_color( $mod );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.site-description',
+				'.secondary .widget',
+				'.widget-title',
+				'#colophon',
+				'.primary-navigation a',
+				'.primary-navigation a:hover'
+			),
+			'declarations' => array(
+				'color' => $color
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.primary-navigation a',
+			),
+			'declarations' => array(
+				'border-color' => $color
+			)
+		) );
+
+	endif;
+
+	// Secondary Link Color
+	$setting = 'secondary-link-color';
+	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
+
+	if ( $mod !== customizer_library_get_default( $setting ) ) :
+
+		$color = sanitize_hex_color( $mod );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.widget a',
+				'#colophon a',
+				'.primary-navigation a',
+				'.primary-navigation ul ul a:hover',
+			),
+			'declarations' => array(
+				'color' => $color
+			)
+		) );
+
+	endif;
 
 	// Primary Font
 	$setting = 'primary-font';
@@ -106,8 +149,6 @@ function zelda_styles() {
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
 				'body',
-				'.site-description',
-				'.widget-title',
 				'.comments-title',
 				'#reply-title'
 			),
@@ -137,205 +178,8 @@ function zelda_styles() {
 
 	}
 
-	// Menu Styling
-	$menus = array(
-		'primary',
-		'secondary'
-	);
-
-	foreach ( $menus as $menu ) {
-
-		if ( ! has_nav_menu( $menu ) ) {
-			break;
-		}
-
-		if ( $menu == 'primary' ) {
-			$selector = '#primary-navigation' . ' ';
-		}
-
-		if ( $menu == 'secondary' ) {
-			$selector = '#secondary-navigation' . ' ';
-		}
-
-		// Background
-		$setting = $menu . '-menu-background';
-		$mod = get_theme_mod( $setting, false );
-
-		if ( $mod ) {
-			Customizer_Library_Styles()->add( array(
-				'selectors' => array(
-					$selector,
-					$selector . 'ul ul a:hover'
-				),
-				'declarations' => array(
-					'background-color' => $mod
-				)
-			) );
-		}
-
-		// Background Hover
-		$setting = $menu . '-menu-background-hover';
-		$mod = get_theme_mod( $setting, false );
-
-		if ( $mod ) {
-			Customizer_Library_Styles()->add( array(
-				'selectors' => array(
-					$selector . 'a:hover',
-					$selector . 'li:hover a'
-				),
-				'declarations' => array(
-					'background-color' => $mod
-				)
-			) );
-		}
-
-		// Navigation Text
-		$setting = $menu . '-menu-color';
-		$mod = get_theme_mod( $setting, false );
-
-		if ( $mod ) {
-			Customizer_Library_Styles()->add( array(
-				'selectors' => array(
-					$selector . 'a',
-					$selector . 'a:hover',
-					$selector . 'li:hover a',
-					$selector . '.dropdown-toggle:after'
-				),
-				'declarations' => array(
-					'color' => $mod
-				)
-			) );
-		}
-
-		// Border
-		$setting = $menu . '-menu-border';
-		$mod = get_theme_mod( $setting, false );
-
-		if ( $mod ) {
-			Customizer_Library_Styles()->add( array(
-				'selectors' => array(
-					$selector . 'ul',
-					$selector . 'a',
-					$selector . '.dropdown-toggle',
-					$selector . 'ul ul',
-					$selector . 'ul ul a',
-					$selector . 'ul li:hover ul a',
-					$selector . 'ul ul ul'
-				),
-				'declarations' => array(
-					'border-color' => $mod
-				)
-			) );
-		}
-
-	}
-
-	// Header Background Color
-	$setting = 'header-background-color';
-	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
-
-	if ( $mod != customizer_library_get_default( $setting ) ) {
-
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'.site-branding'
-			),
-			'declarations' => array(
-				'background-color' => $mod
-			)
-		) );
-
-	}
-
-	// Header Background Image
-	$setting = 'header-background-image';
-	$mod = get_theme_mod( $setting, false );
-
-	if ( $mod ) {
-
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'.site-branding'
-			),
-			'declarations' => array(
-				'background-image' => 'url(' . $mod . ')'
-			)
-		) );
-
-	}
-
-	// Header Background Image Styles
-	$setting = 'header-background-image-style';
-	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
-
-	if ( $mod != customizer_library_get_default( $setting ) ) {
-
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'.site-branding'
-			),
-			'declarations' => array(
-				'background-size' => 'auto auto',
-				'background-repeat' => 'repeat',
-				'background-position' => '0 0'
-			)
-		) );
-
-	}
-
-	// Center Header Text
-	$setting = 'center-branding';
-	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
-
-	if ( $mod ) {
-
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'.site-branding'
-			),
-			'declarations' => array(
-				'text-align' => 'center'
-			)
-		) );
-
-	}
-
-	// Site Title Color
-	$setting = 'site-title-color';
-	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
-
-	if ( $mod != customizer_library_get_default( $setting ) ) {
-
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'.site-title a'
-			),
-			'declarations' => array(
-				'color' => $mod
-			)
-		) );
-
-	}
-
-	// Site Title Color
-	$setting = 'site-title-hover-color';
-	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
-
-	if ( $mod != customizer_library_get_default( $setting ) ) {
-
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'.site-title a:hover'
-			),
-			'declarations' => array(
-				'color' => $mod
-			)
-		) );
-
-	}
-
-	// Site Title Font
-	$setting = 'site-title-font';
+	// Tertiary Font
+	$setting = 'tertiary-font';
 	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
 	$stack = customizer_library_get_font_stack( $mod );
 
@@ -343,27 +187,11 @@ function zelda_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'.site-title'
+				'.widget-title',
+				'.primary-navigation',
 			),
 			'declarations' => array(
 				'font-family' => $stack
-			)
-		) );
-
-	}
-
-	// Site Tagline Color
-	$setting = 'site-tagline-color';
-	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
-
-	if ( $mod != customizer_library_get_default( $setting ) ) {
-
-		Customizer_Library_Styles()->add( array(
-			'selectors' => array(
-				'.site-description'
-			),
-			'declarations' => array(
-				'color' => $mod
 			)
 		) );
 

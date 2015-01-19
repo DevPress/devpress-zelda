@@ -74,6 +74,18 @@ function zelda_setup() {
 		'default-color' => '322222',
 		'default-image' => '',
 	) ) );
+
+	// Theme layouts
+	add_theme_support(
+		'theme-layouts',
+		array(
+			'single-column' => __( '1 Column Wide', 'zelda' ),
+			'sidebar-right' => __( '2 Columns: Content / Sidebar', 'zelda' ),
+			'sidebar-left' => __( '2 Columns: Sidebar / Content', 'zelda' )
+		),
+		array( 'default' => 'sidebar-right' )
+	);
+
 }
 endif; // zelda_setup
 add_action( 'after_setup_theme', 'zelda_setup' );
@@ -222,6 +234,14 @@ require get_template_directory() . '/inc/template-tags.php';
 
 // Custom functions that act independently of the theme templates.
 require get_template_directory() . '/inc/extras.php';
+
+// Color utility functions.
+if ( ! class_exists( 'Jetpack_Color' ) ) {
+	require get_template_directory() . '/inc/jetpack.class.color.php';
+}
+
+// Theme Layouts
+require get_template_directory() . '/inc/theme-layouts.php';
 
 // Helper library for the theme customizer.
 require get_template_directory() . '/inc/customizer-library/customizer-library.php';

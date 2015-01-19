@@ -6,11 +6,10 @@
  */
 ?>
 
-<?php if ( zelda_show_sidebar() ) : ?>
+<?php if ( 'single-column' != get_theme_mod( 'theme_layout' ) ) : ?>
 
 	<div id="secondary" class="secondary" role="complementary">
 		<?php if ( ! dynamic_sidebar( 'primary' ) ) : ?>
-
 		<?php endif; // end sidebar widget area ?>
 	</div><!-- #secondary -->
 

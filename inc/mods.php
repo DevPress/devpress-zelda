@@ -25,50 +25,6 @@ function zelda_get_default_footer_text() {
 }
 
 /**
- * Adds custom classes to the array of body classes.
- *
- * @since Zelda 0.1
- */
-function zelda_body_classes( $classes ) {
-
-	global $post;
-
-	if ( zelda_show_sidebar() ) {
-		$classes[] = get_theme_mod( 'standard-layout', customizer_library_get_default( 'standard-layout' ) );
-	} else {
-		$classes[] = 'no-sidebar';
-	}
-
-	// Simplify body class for full-width template
-	if ( isset( $post ) && ( is_page_template( 'templates/full-width.php' ) ) ) {
-		foreach( $classes as $key => $value) {
-			if ( $value == 'page-template-templatesfull-width-php') {
-				$classes[$key] = 'page-template-full-width-php';
-			}
-		}
-		$classes[] = 'full-width';
-	}
-
-	return $classes;
-}
-add_filter( 'body_class', 'zelda_body_classes' );
-
-/**
- * Conditional logic for displaying sidebar
- *
- * @since Zelda 0.1
- */
- function zelda_show_sidebar() {
-
- 	// If there's no active sidebar widgets
- 	if ( !is_active_sidebar( 'primary' ) ) {
-	 	return false;
- 	}
-
- 	return true;
-}
-
-/**
  * Append class "social" to specific off-site links
  *
  * @since Zelda 0.1

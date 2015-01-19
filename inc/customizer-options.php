@@ -15,8 +15,11 @@
 function zelda_options() {
 
 	// Theme defaults
-	$primary_color = '#5bc08c';
-	$secondary_color = '#f99868';
+	$primary_background_color = '#322222';
+	$primary_link_color = '#D55C17';
+	$secondary_background_color = '#1C0F08';
+	$secondary_text_color = '#604C40';
+	$secondary_link_color = '#ffffff';
 
 	// Stores all the controls that will be added
 	$options = array();
@@ -68,43 +71,36 @@ function zelda_options() {
 		'priority' => '80'
 	);
 
-	$options['site-title-color'] = array(
-		'id' => 'site-title-color',
-		'label'   => __( 'Site Title Color', 'zelda' ),
+	$options['primary-link-color'] = array(
+		'id' => 'primary-link-color',
+		'label'   => __( 'Primary Link Color', 'zelda' ),
 		'section' => $section,
 		'type'    => 'color',
-		'default' => '#ffffff',
+		'default' => $primary_link_color,
 	);
 
-	$options['site-tagline-color'] = array(
-		'id' => 'site-tagline-color',
-		'label'   => __( 'Site Tagline Color', 'zelda' ),
+	$options['secondary-background-color'] = array(
+		'id' => 'secondary-background-color',
+		'label'   => __( 'Secondary Background Color', 'zelda' ),
 		'section' => $section,
 		'type'    => 'color',
-		'default' => '#614D41',
+		'default' => $secondary_background_color,
 	);
 
-	// Layout
-	$section = 'layout';
-
-	$sections[] = array(
-		'id' => $section,
-		'title' => __( 'Layout', 'zelda' ),
-		'priority' => '70'
-	);
-
-	$choices = array(
-		'sidebar-right' => 'Sidebar Right',
-		'sidebar-left' => 'Single Column',
-	);
-
-	$options['standard-layout'] = array(
-		'id' => 'standard-layout',
-		'label'   => __( 'Standard Layout', 'zelda' ),
+	$options['secondary-text-color'] = array(
+		'id' => 'secondary-text-color',
+		'label'   => __( 'Secondary Text Color', 'zelda' ),
 		'section' => $section,
-		'type'    => 'select',
-		'choices' => $choices,
-		'default' => 'sidebar-right'
+		'type'    => 'color',
+		'default' => $secondary_text_color,
+	);
+
+	$options['secondary-link-color'] = array(
+		'id' => 'secondary-link-color',
+		'label'   => __( 'Secondary Link Color', 'zelda' ),
+		'section' => $section,
+		'type'    => 'color',
+		'default' => $secondary_link_color,
 	);
 
 	// Typography
@@ -194,28 +190,6 @@ function zelda_options() {
 		'type'    => 'checkbox',
 		'default' => 1,
 	);
-
-	// Easy Digital Downloads
-	if ( class_exists( 'Easy_Digital_Downloads' ) ) :
-
-		// EDD Settings
-		$section = 'easy-digital-downloads';
-
-		$sections[] = array(
-			'id' => $section,
-			'title' => __( 'Easy Digital Downloads', 'zelda' ),
-			'priority' => '90'
-		);
-
-		$options['front-page-downloads'] = array(
-			'id' => 'front-page-downloads',
-			'label'   => __( 'Display downloads on front page.', 'zelda' ),
-			'section' => $section,
-			'type'    => 'checkbox',
-			'default' => 0
-		);
-
-	endif;
 
 	// Footer Settings
 	$section = 'footer';
