@@ -8,13 +8,13 @@
 /**
  * The current version of the theme.
  */
-define( 'ZELDA_VERSION', '0.3.0' );
+define( 'ZELDA_VERSION', '1.0.0' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 664; /* pixels */
+	$content_width = 780; /* pixels */
 }
 
 if ( ! function_exists( 'zelda_setup' ) ) :
@@ -44,8 +44,8 @@ function zelda_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 720, 1200 );
-	add_image_size( 'zelda-archive', 560, 999 );
+	set_post_thumbnail_size( 780, 1200 );
+	add_image_size( 'zelda-showcase', 480, 480, true );
 
 	// Registers menu above the site title
 	register_nav_menus( array(

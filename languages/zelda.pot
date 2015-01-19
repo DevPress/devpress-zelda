@@ -288,7 +288,7 @@ msgstr ""
 msgid "%1$s by %2$s."
 msgstr ""
 
-#: inc/mods.php:150 templates/post-showcase.php:55
+#: inc/mods.php:150 templates/post-showcase.php:57
 msgid "Read More"
 msgstr ""
 

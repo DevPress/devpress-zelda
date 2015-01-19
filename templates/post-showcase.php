@@ -21,19 +21,21 @@ get_header(); ?>
 		if ( $query->have_posts() ) :
 			$count = 1;
 			while ( $query->have_posts() ) : $query->the_post();
-			$thumbnail = array( 250, 250, true );
+			$thumbnail = 'zelda-showcase';
 
 			if ( 1 == $count ) {
-				$thumbnail = null;
+				$thumbnail = array( 780, 780, true );
 			}
 			?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class( 'featured-' . $count ); ?>>
 
 					<?php if ( has_post_thumbnail() ) { ?>
-					<figure class="entry-image">
-						<?php the_post_thumbnail( $thumbnail ); ?>
-					</figure>
+					<a href="<?php the_permalink(); ?>" class="entry-image-link">
+						<figure class="entry-image">
+							<?php the_post_thumbnail( $thumbnail ); ?>
+						</figure>
+					</a>
 					<?php } ?>
 
 					<header class="entry-header">
@@ -51,7 +53,7 @@ get_header(); ?>
 
 					<?php if ( 1 != $count ) : ?>
 					<p class="read-more">
-						<a href="<?php get_permalink(); ?>">
+						<a href="<?php the_permalink(); ?>">
 							<?php _e( 'Read More', 'zelda' ); ?>
 						</a>
 					</p>

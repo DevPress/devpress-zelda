@@ -71,10 +71,15 @@ a:active {
 -------------------------------------------------------------- */
 
 #page {
-	background: $seconday-background-color;
+	background: $secondary-background-color;
 	width:96%;
 	max-width:1080px;
 	margin:0 auto;
+}
+@media screen and (max-width:480px) {
+	#page {
+		width: 100%;
+	}
 }
 .content-area {
 	width: 100%;
@@ -239,6 +244,9 @@ a:active {
 .entry-image img {
 	display: block;
 }
+.entry-image-link:hover .entry-image {
+	opacity: 0.8;
+}
 .entry-image {
 	display: block;
 	position: relative;
@@ -258,21 +266,6 @@ a:active {
 }
 .entry-image img {
 	width:100%;
-}
-.entry-image-section .overlay {
-	position: absolute;
-	background: rgba(0,0,0,.4);
-	color: #fff;
-	font-size: 13px;
-	padding: 10px;
-}
-.overlay-top-right {
-	top: 15px;
-	right: 15px;
-}
-.overlay-bottom-right {
-	bottom: 15px;
-	right: 15px;
 }
 .entry-content,
 .author-meta,
@@ -348,7 +341,7 @@ a:active {
 --------------------------------------------------------------*/
 
 #content blockquote {
-	border-left: 4px solid $seconday-background-color;
+	border-left: 4px solid $secondary-background-color;
 	margin: 0 0 15px;
 	padding: 30px 30px 30px 90px;
 	position: relative;
@@ -748,7 +741,7 @@ a:active {
 #colophon {
 	font-size: 13px;
 	padding: 20px 30px;
-	background: $seconday-background-color;
+	background: $secondary-background-color;
 	color: $secondary-text-color;
 }
 #colophon a {
