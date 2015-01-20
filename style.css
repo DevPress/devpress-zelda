@@ -1196,6 +1196,10 @@ a:active {
     padding: 0 30px 30px;
   }
 }
+.admin-msg {
+  padding: 60px 30px;
+}
+
 /* Search & 404
 --------------------------------------------------------------*/
 .search-form label {

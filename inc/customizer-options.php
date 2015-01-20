@@ -177,7 +177,7 @@ function zelda_options() {
 
 	// Get post tags
 	$tags = array();
-	$tags[] = __( 'All Posts', 'zelda' );
+	$tags['zelda-all-posts'] = __( 'All Posts', 'zelda' );
 	$obj = get_tags();
 	foreach ( $obj as $tag ) {
 		$tags[$tag->slug] = $tag->name;
@@ -190,7 +190,7 @@ function zelda_options() {
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => $tags,
-		'default' => ''
+		'default' => 'zelda-all-posts'
 	);
 
 	// Get pages
@@ -272,7 +272,7 @@ function zelda_options() {
 	$customizer_library = Customizer_Library::Instance();
 	$customizer_library->add_options( $options );
 
-	customizer_library_remove_theme_mods();
+	// customizer_library_remove_theme_mods();
 
 }
 add_action( 'init', 'zelda_options', 100 );

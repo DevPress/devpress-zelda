@@ -2,7 +2,7 @@
 /**
  * Template Name: Post Showcase
  *
- * The template for displays an alternative magazine layout.
+ * Displays a magazine layout of posts.
  *
  * @package Zelda
  */
@@ -15,9 +15,15 @@ get_header(); ?>
 		$args = array(
 			'posts_per_page' => 5,
 			'post_type' => 'post',
-			'meta_key' => '_thumbnail_id'
+			'meta_key' => '_thumbnail_id',
 		);
+
+		if ( 'zelda-all-posts' != get_theme_mod( 'showcase-tag' ) ) {
+			$args['tag'] = get_theme_mod( 'showcase-tag' );
+		}
+
 		$query = new WP_Query( $args );
+
 		if ( $query->have_posts() ) :
 			$count = 1;
 			while ( $query->have_posts() ) : $query->the_post();
@@ -64,6 +70,13 @@ get_header(); ?>
 			<?php
 			$count++;
 			endwhile;
+		else :
+			if ( current_user_can( 'edit_posts' ) ) { ?>
+				<div class="admin-msg">
+					<p><?php _e( 'Sorry, there are no posts available to display.', 'zelda' ); ?></p>
+					<p><?php _e( 'Make featured images are set and there are enough posts published for the selected tag.', 'zelda' ); ?></p>
+				</div>
+			<?php }
 		endif;
 		?>
 
