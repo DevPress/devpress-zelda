@@ -557,6 +557,15 @@ a:active {
   line-height: 1;
 }
 
+.brand-logo,
+.brand-title {
+  margin: 0;
+}
+
+.brand-title .site-logo {
+  margin-right: 5px;
+}
+
 .site-description {
   color: #604c40;
   font-size: 18px;
@@ -658,8 +667,10 @@ a:active {
   cursor: pointer;
   float: right;
   padding: 12px 10px 12px 0;
-  color: #fff;
+  color: white;
   font-weight: 600;
+  text-transform: uppercase;
+  margin-right: -12px;
 }
 
 .menu-toggle:hover {

@@ -25,21 +25,38 @@
 	<header id="masthead" class="site-header clearfix" role="banner">
 
 		<div class="site-branding">
-			<?php if ( get_theme_mod( 'logo', 0 ) ) {
-				$class = 'site-logo';
-				$output = '<img src="' . esc_url( get_theme_mod( 'logo' ) ) . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '">';
-			} else {
-				$class = 'site-title';
-				$output = get_bloginfo( 'name' );
-			} ?>
 
-			<h1 class="<?php echo esc_attr( $class ); ?>">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<?php echo $output; ?>
-				</a>
+			<?php
+			$brand = array();
+			if ( get_theme_mod( 'logo', 0 ) ) {
+				$brand[] = 'brand-logo';
+			}
+			if ( ! get_theme_mod( 'hide-site-title', 0 ) ) {
+				$brand[] = 'brand-title';
+			}
+			?>
+
+			<h1 class="<?php echo implode( ' ', $brand ); ?>">
+
+				<?php if ( get_theme_mod( 'logo', 0 ) ) : ?>
+				<span class="site-logo">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<img src="<?php echo esc_url( get_theme_mod( 'logo' ) ); ?>" alt="<?php esc_attr( get_bloginfo( 'name' ) ); ?>" >
+					</a>
+				</span>
+				<?php endif; ?>
+
+				<?php if ( ! get_theme_mod( 'hide-site-title', 0 ) ) : ?>
+				<span class="site-title">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<?php bloginfo( 'name' ); ?>
+					</a>
+				</span>
+				<?php endif; ?>
+
 			</h1>
 
-			<?php if ( get_bloginfo( 'description' ) != '' ) : ?>
+			<?php if ( get_bloginfo( 'description' ) != '' && ! get_theme_mod( 'hide-site-tagline', 0 ) ) : ?>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			<?php endif; ?>
 		</div>

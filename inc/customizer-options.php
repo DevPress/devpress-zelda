@@ -27,18 +27,40 @@ function zelda_options() {
 	// Stores all the sections to be added
 	$sections = array();
 
+	// Header
+	$section = 'title_tagline';
+
+	$options['hide-site-title'] = array(
+		'id' => 'hide-site-title',
+		'label'   => __( 'Hide Site Title', 'zelda' ),
+		'section' => $section,
+		'type'    => 'checkbox',
+		'default' => 0,
+		'priority' => '100'
+	);
+
+	$options['hide-site-tagline'] = array(
+		'id' => 'hide-site-tagline',
+		'label'   => __( 'Hide Site Tagline', 'zelda' ),
+		'section' => $section,
+		'type'    => 'checkbox',
+		'default' => 0,
+		'priority' => '200'
+	);
+
 	// Logo
 	$section = 'logo';
 
 	$sections[] = array(
 		'id' => $section,
 		'title' => __( 'Logo', 'zelda' ),
-		'priority' => '20'
+		'priority' => '25'
 	);
 
 	$options['logo'] = array(
 		'id' => 'logo',
 		'label'   => __( 'Logo', 'zelda' ),
+		'description'  => __( 'You can hide site title or description under header options.', 'zelda' ),
 		'section' => $section,
 		'type'    => 'upload',
 		'default' => '',

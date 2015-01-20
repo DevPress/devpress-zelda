@@ -187,6 +187,13 @@ a:active {
 	margin: 0;
 	line-height: 1;
 }
+.brand-logo,
+.brand-title {
+	margin: 0;
+}
+.brand-title .site-logo {
+	margin-right: 5px;
+}
 .site-description {
 	color: $secondary-text-color;
 	font-size: 18px;

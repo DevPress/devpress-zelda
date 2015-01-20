@@ -88,31 +88,31 @@ msgstr ""
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: functions.php:52
+#: functions.php:56
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:53
+#: functions.php:57
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:82
+#: functions.php:86
 msgid "1 Column Wide"
 msgstr ""
 
-#: functions.php:83
+#: functions.php:87
 msgid "2 Columns: Content / Sidebar"
 msgstr ""
 
-#: functions.php:84
+#: functions.php:88
 msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
-#: functions.php:101
+#: functions.php:105
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:111 inc/customizer-options.php:257
+#: functions.php:115 inc/customizer-options.php:279
 msgid "Footer"
 msgstr ""
 
@@ -120,7 +120,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:49
+#: header.php:66
 msgid "Menu"
 msgstr ""
 
@@ -164,121 +164,133 @@ msgstr ""
 msgid "Vietnamese"
 msgstr ""
 
-#: inc/customizer-options.php:35 inc/customizer-options.php:41
+#: inc/customizer-options.php:35
+msgid "Hide Site Title"
+msgstr ""
+
+#: inc/customizer-options.php:44
+msgid "Hide Site Tagline"
+msgstr ""
+
+#: inc/customizer-options.php:56 inc/customizer-options.php:62
 msgid "Logo"
 msgstr ""
 
-#: inc/customizer-options.php:49
+#: inc/customizer-options.php:63
+msgid "You can hide site title or description under header options."
+msgstr ""
+
+#: inc/customizer-options.php:71
 msgid "Favicon"
 msgstr ""
 
-#: inc/customizer-options.php:53
+#: inc/customizer-options.php:75
 msgid ""
 "File must be <strong>.png</strong> format. Optimal dimensions: <strong>32px "
 "x 32px</strong>."
 msgstr ""
 
-#: inc/customizer-options.php:58
+#: inc/customizer-options.php:80
 msgid "Apple Touch Icon"
 msgstr ""
 
-#: inc/customizer-options.php:62
+#: inc/customizer-options.php:84
 msgid ""
 "File must be <strong>.png</strong> format. Optimal dimensions: "
 "<strong>152px x 152px</strong>."
 msgstr ""
 
-#: inc/customizer-options.php:70
+#: inc/customizer-options.php:92
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer-options.php:76
+#: inc/customizer-options.php:98
 msgid "Primary Link Color"
 msgstr ""
 
-#: inc/customizer-options.php:84
+#: inc/customizer-options.php:106
 msgid "Secondary Background Color"
 msgstr ""
 
-#: inc/customizer-options.php:92
+#: inc/customizer-options.php:114
 msgid "Secondary Text Color"
 msgstr ""
 
-#: inc/customizer-options.php:100
+#: inc/customizer-options.php:122
 msgid "Secondary Link Color"
 msgstr ""
 
-#: inc/customizer-options.php:111
+#: inc/customizer-options.php:133
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer-options.php:117
+#: inc/customizer-options.php:139
 msgid "Primary Font"
 msgstr ""
 
-#: inc/customizer-options.php:126
+#: inc/customizer-options.php:148
 msgid "Secondary Font"
 msgstr ""
 
-#: inc/customizer-options.php:135
+#: inc/customizer-options.php:157
 msgid "Tertiary Font"
 msgstr ""
 
-#: inc/customizer-options.php:148
+#: inc/customizer-options.php:170
 msgid "Archive"
 msgstr ""
 
-#: inc/customizer-options.php:154
+#: inc/customizer-options.php:176
 msgid "Display Excerpts"
 msgstr ""
 
-#: inc/customizer-options.php:155
+#: inc/customizer-options.php:177
 msgid "Display excerpts instead of full content."
 msgstr ""
 
-#: inc/customizer-options.php:163 inc/customizer-options.php:246
+#: inc/customizer-options.php:185 inc/customizer-options.php:268
 msgid "Display Featured Images"
 msgstr ""
 
-#: inc/customizer-options.php:174
+#: inc/customizer-options.php:196
 msgid "Showcase"
 msgstr ""
 
-#: inc/customizer-options.php:180
+#: inc/customizer-options.php:202
 msgid "All Posts"
 msgstr ""
 
-#: inc/customizer-options.php:188
+#: inc/customizer-options.php:210
 msgid "Showcase Tag"
 msgstr ""
 
-#: inc/customizer-options.php:189
+#: inc/customizer-options.php:211
 msgid ""
 "This is for the \"Post Showcase\" template. Select \"All Posts\" to show "
 "the most recent five."
 msgstr ""
 
-#: inc/customizer-options.php:198
+#: inc/customizer-options.php:220
 msgid "Select Page"
 msgstr ""
 
-#: inc/customizer-options.php:206
+#: inc/customizer-options.php:228
 msgid "Showcase Pages"
 msgstr ""
 
-#: inc/customizer-options.php:207
+#: inc/customizer-options.php:229
 msgid "This is for the \"Page Showcase\" template. Select up to five."
 msgstr ""
 
-#: inc/customizer-options.php:232
+#: inc/customizer-options.php:254
 msgid "Post"
 msgstr ""
 
-#: inc/customizer-options.php:238
+#: inc/customizer-options.php:260
 msgid "Display Post Dates"
 msgstr ""
 
-#: inc/customizer-options.php:263
+#: inc/customizer-options.php:285
 msgid "Footer Text"
 msgstr ""
 
@@ -322,7 +334,8 @@ msgstr ""
 msgid "%1$s by %2$s."
 msgstr ""
 
-#: inc/mods.php:106 templates/post-showcase.php:57
+#: inc/mods.php:123 inc/mods.php:134 templates/page-showcase.php:88
+#: templates/post-showcase.php:91
 msgid "Read More"
 msgstr ""
 
@@ -452,6 +465,16 @@ msgstr ""
 
 #: searchform.php:12 searchform.php:15
 msgid "Search..."
+msgstr ""
+
+#: templates/page-showcase.php:101 templates/post-showcase.php:104
+msgid "Sorry, there are no posts available to display."
+msgstr ""
+
+#: templates/page-showcase.php:102 templates/post-showcase.php:105
+msgid ""
+"Make featured images are set and there are enough posts published for the "
+"selected tag."
 msgstr ""
 
 #. Theme Name of the plugin/theme

@@ -557,6 +557,15 @@ a:active {
   line-height: 1;
 }
 
+.brand-logo,
+.brand-title {
+  margin: 0;
+}
+
+.brand-title .site-logo {
+  margin-left: 5px;
+}
+
 .site-description {
   color: #604c40;
   font-size: 18px;
@@ -658,8 +667,10 @@ a:active {
   cursor: pointer;
   float: left;
   padding: 12px 0 12px 10px;
-  color: #fff;
+  color: white;
   font-weight: 600;
+  text-transform: uppercase;
+  margin-left: -12px;
 }
 
 .menu-toggle:hover {
@@ -951,7 +962,7 @@ a:active {
   z-index: 1;
   display: block;
   content: '';
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 0;
   right: 0;
@@ -1083,59 +1094,68 @@ a:active {
 
 /* Page Templates
 --------------------------------------------------------------*/
-.page-template-post-showcase .hentry {
+.template-showcase .hentry {
   background: #fff;
   border-bottom: 1px solid #eee;
   margin-bottom: 30px;
 }
 
-.page-template-post-showcase .content-area {
+.template-showcase .content-area {
   background: #f8f8f8;
 }
 
-.page-template-post-showcase .entry-image {
+.template-showcase .entry-image {
   margin: 0 0 15px;
   padding: 0;
 }
 
-.page-template-post-showcase .entry-header {
+.template-showcase .fallback-thumbnail {
+  background: #d55c17;
+  padding: 25%;
+}
+
+.template-showcase .featured-1 .fallback-thumbnail {
+  padding: 15%;
+}
+
+.template-showcase .entry-header {
   padding: 0 15px;
   margin: 0 0 10px;
 }
 
-.page-template-post-showcase .entry-meta {
+.template-showcase .entry-meta {
   font-size: 10px;
   margin: 0 0 10px;
 }
 
-.page-template-post-showcase .entry-title {
+.template-showcase .entry-title {
   font-size: 18px;
   line-height: 1.2;
 }
 
-.page-template-post-showcase .read-more {
+.template-showcase .read-more {
   padding: 0 15px;
   margin: 0 0 15px;
 }
 
-.page-template-post-showcase .featured-1 .entry-meta {
+.template-showcase .featured-1 .entry-meta {
   font-size: 12px;
 }
 
-.page-template-post-showcase .featured-1 .entry-title {
+.template-showcase .featured-1 .entry-title {
   font-size: 34px;
 }
 
-.page-template-post-showcase .featured-1 .entry-summary {
+.template-showcase .featured-1 .entry-summary {
   padding: 0 15px;
   margin: 0 0 15px;
 }
 
-.page-template-post-showcase .featured-1 .read-more {
+.template-showcase .featured-1 .read-more {
   padding: 0;
 }
 
-.page-template-post-showcase .featured-1:after {
+.template-showcase .featured-1:after {
   content: " ";
   display: table;
   clear: both;
@@ -1147,27 +1167,27 @@ a:active {
 }
 
 @media screen and (min-width: 881px) {
-  .page-template-post-showcase .hentry {
+  .template-showcase .hentry {
     width: calc(25% - 37.5px );
     float: right;
     margin: 0 30px 30px 0;
     min-height: 365px;
   }
 
-  .page-template-post-showcase .featured-1 {
+  .template-showcase .featured-1 {
     width: 100%;
     float: none;
     margin: 0 0 30px;
   }
 
-  .page-template-post-showcase .featured-1 .entry-image {
+  .template-showcase .featured-1 .entry-image {
     float: right;
     width: 55%;
     margin: 0;
   }
 
-  .page-template-post-showcase .featured-1 .entry-header,
-  .page-template-post-showcase .featured-1 .entry-summary {
+  .template-showcase .featured-1 .entry-header,
+  .template-showcase .featured-1 .entry-summary {
     float: left;
     width: 45%;
     padding: 30px 30px 0;
@@ -1175,27 +1195,31 @@ a:active {
   }
 }
 @media screen and (min-width: 481px) and (max-width: 880px) {
-  .page-template-post-showcase .hentry {
+  .template-showcase .hentry {
     width: calc(50% - 45px );
     float: right;
     margin: 0 30px 30px 0;
     min-height: 365px;
   }
 
-  .page-template-post-showcase .featured-1 {
+  .template-showcase .featured-1 {
     width: calc(100% - 60px );
     float: none;
     margin: 30px;
   }
 
-  .page-template-post-showcase .featured-1 .entry-header {
+  .template-showcase .featured-1 .entry-header {
     padding: 15px 30px;
   }
 
-  .page-template-post-showcase .featured-1 .entry-summary {
+  .template-showcase .featured-1 .entry-summary {
     padding: 0 30px 30px;
   }
 }
+.admin-msg {
+  padding: 60px 30px;
+}
+
 /* Search & 404
 --------------------------------------------------------------*/
 .search-form label {

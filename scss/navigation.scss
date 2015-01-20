@@ -79,8 +79,10 @@
 	cursor: pointer;
 	float: right;
 	padding: 12px 10px 12px 0;
-	color: #fff;
+	color: $secondary-link-color;
 	font-weight: 600;
+	text-transform: uppercase;
+	margin-right: -12px;
 }
 .menu-toggle:hover {
 	background:none;
