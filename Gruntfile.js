@@ -134,8 +134,8 @@ module.exports = function(grunt) {
 				],
 				overwrite: true,
 				replacements: [ {
-					from: /^define\( 'CASCADE_VERSION'.*$/m,
-					to: 'define( \'CASCADE_VERSION\', \'<%= pkg.version %>\' );'
+					from: /^define\( 'ZELDA_VERSION'.*$/m,
+					to: 'define( \'ZELDA_VERSION\', \'<%= pkg.version %>\' );'
 				} ]
 			},
 		}
