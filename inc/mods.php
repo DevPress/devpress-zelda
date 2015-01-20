@@ -25,6 +25,24 @@ function zelda_get_default_footer_text() {
 }
 
 /**
+ * Adds custom classes to the array of body classes.
+ *
+ * @since Zelda 0.1
+ */
+function zelda_body_classes( $classes ) {
+
+	global $post;
+
+	// Simplify body class for showcase template
+	if ( isset( $post ) && ( is_page_template( 'templates/post-showcase.php' ) || is_page_template( 'templates/page-showcase.php' )) ) {
+		$classes[] = 'template-showcase';
+	}
+
+	return $classes;
+}
+add_filter( 'body_class', 'zelda_body_classes' );
+
+/**
  * Append class "social" to specific off-site links
  *
  * @since Zelda 0.1

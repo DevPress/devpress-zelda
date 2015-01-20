@@ -38,6 +38,9 @@ function zelda_setup() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
+	// Add excerpt field to pages
+	add_post_type_support( 'page', 'excerpt' );
+
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *

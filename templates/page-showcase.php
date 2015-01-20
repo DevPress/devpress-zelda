@@ -12,15 +12,22 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 
 		<?php
+
+		// Get pages set in the customizer (if any)
+		$pages = array();
+		for ( $count = 1; $count <= 5; $count++ ) {
+			$mod = get_theme_mod( 'showcase-page-' . $count );
+			if ( 'zelda-none-selected' != $mod ) {
+				$pages[] = $mod;
+			}
+		}
+
 		$args = array(
 			'posts_per_page' => 5,
-			'post_type' => 'post',
+			'post_type' => 'page',
 			'meta_key' => '_thumbnail_id',
+			'post__in' => $pages
 		);
-
-		if ( 'zelda-all-posts' != get_theme_mod( 'showcase-tag' ) ) {
-			$args['tag'] = get_theme_mod( 'showcase-tag' );
-		}
 
 		$query = new WP_Query( $args );
 
@@ -45,9 +52,6 @@ get_header(); ?>
 					<?php } ?>
 
 					<header class="entry-header">
-						<div class="entry-meta entry-header-meta">
-							<?php zelda_posted_on( array( 'date' ) ); ?>
-						</div><!-- .entry-meta -->
 						<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 					</header><!-- .entry-header -->
 

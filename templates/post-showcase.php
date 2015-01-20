@@ -12,12 +12,14 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 
 		<?php
+
 		$args = array(
 			'posts_per_page' => 5,
 			'post_type' => 'post',
 			'meta_key' => '_thumbnail_id',
 		);
 
+		// If a showcase tag has been selected in the customizer, let's use it
 		if ( 'zelda-all-posts' != get_theme_mod( 'showcase-tag' ) ) {
 			$args['tag'] = get_theme_mod( 'showcase-tag' );
 		}

@@ -195,7 +195,7 @@ function zelda_options() {
 
 	// Get pages
 	$pages = array();
-	$pages[''] = __( 'Select Page', 'zelda' );
+	$pages['zelda-none-selected'] = __( 'Select Page', 'zelda' );
 	$obj = get_pages( 'sort_column=post_parent,menu_order' );
 	foreach ( $obj as $page) {
 		$pages[$page->ID] = $page->post_title;
