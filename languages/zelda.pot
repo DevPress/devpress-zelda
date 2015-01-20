@@ -96,11 +96,23 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:89
+#: functions.php:82
+msgid "1 Column Wide"
+msgstr ""
+
+#: functions.php:83
+msgid "2 Columns: Content / Sidebar"
+msgstr ""
+
+#: functions.php:84
+msgid "2 Columns: Sidebar / Content"
+msgstr ""
+
+#: functions.php:101
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:99 inc/customizer-options.php:225
+#: functions.php:111 inc/customizer-options.php:257
 msgid "Footer"
 msgstr ""
 
@@ -152,99 +164,121 @@ msgstr ""
 msgid "Vietnamese"
 msgstr ""
 
-#: inc/customizer-options.php:32 inc/customizer-options.php:38
+#: inc/customizer-options.php:35 inc/customizer-options.php:41
 msgid "Logo"
 msgstr ""
 
-#: inc/customizer-options.php:46
+#: inc/customizer-options.php:49
 msgid "Favicon"
 msgstr ""
 
-#: inc/customizer-options.php:50
+#: inc/customizer-options.php:53
 msgid ""
 "File must be <strong>.png</strong> format. Optimal dimensions: <strong>32px "
 "x 32px</strong>."
 msgstr ""
 
-#: inc/customizer-options.php:55
+#: inc/customizer-options.php:58
 msgid "Apple Touch Icon"
 msgstr ""
 
-#: inc/customizer-options.php:59
+#: inc/customizer-options.php:62
 msgid ""
 "File must be <strong>.png</strong> format. Optimal dimensions: "
 "<strong>152px x 152px</strong>."
 msgstr ""
 
-#: inc/customizer-options.php:67
+#: inc/customizer-options.php:70
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer-options.php:73
-msgid "Site Title Color"
+#: inc/customizer-options.php:76
+msgid "Primary Link Color"
 msgstr ""
 
-#: inc/customizer-options.php:81
-msgid "Site Tagline Color"
+#: inc/customizer-options.php:84
+msgid "Secondary Background Color"
 msgstr ""
 
 #: inc/customizer-options.php:92
-msgid "Layout"
+msgid "Secondary Text Color"
 msgstr ""
 
-#: inc/customizer-options.php:103
-msgid "Standard Layout"
+#: inc/customizer-options.php:100
+msgid "Secondary Link Color"
 msgstr ""
 
-#: inc/customizer-options.php:115
+#: inc/customizer-options.php:111
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer-options.php:121
+#: inc/customizer-options.php:117
 msgid "Primary Font"
 msgstr ""
 
-#: inc/customizer-options.php:130
+#: inc/customizer-options.php:126
 msgid "Secondary Font"
 msgstr ""
 
-#: inc/customizer-options.php:139
+#: inc/customizer-options.php:135
 msgid "Tertiary Font"
 msgstr ""
 
-#: inc/customizer-options.php:152
+#: inc/customizer-options.php:148
 msgid "Archive"
 msgstr ""
 
-#: inc/customizer-options.php:158
+#: inc/customizer-options.php:154
 msgid "Display Excerpts"
 msgstr ""
 
-#: inc/customizer-options.php:159
+#: inc/customizer-options.php:155
 msgid "Display excerpts instead of full content."
 msgstr ""
 
-#: inc/customizer-options.php:167 inc/customizer-options.php:192
+#: inc/customizer-options.php:163 inc/customizer-options.php:246
 msgid "Display Featured Images"
 msgstr ""
 
-#: inc/customizer-options.php:178
-msgid "Post"
+#: inc/customizer-options.php:174
+msgid "Showcase"
 msgstr ""
 
-#: inc/customizer-options.php:184
-msgid "Display Post Dates"
+#: inc/customizer-options.php:180
+msgid "All Posts"
+msgstr ""
+
+#: inc/customizer-options.php:188
+msgid "Showcase Tag"
+msgstr ""
+
+#: inc/customizer-options.php:189
+msgid ""
+"This is for the \"Post Showcase\" template. Select \"All Posts\" to show "
+"the most recent five."
+msgstr ""
+
+#: inc/customizer-options.php:198
+msgid "Select Page"
 msgstr ""
 
 #: inc/customizer-options.php:206
-msgid "Easy Digital Downloads"
+msgid "Showcase Pages"
 msgstr ""
 
-#: inc/customizer-options.php:212
-msgid "Display downloads on front page."
+#: inc/customizer-options.php:207
+msgid "This is for the \"Page Showcase\" template. Select up to five."
 msgstr ""
 
-#: inc/customizer-options.php:231
+#: inc/customizer-options.php:232
+msgid "Post"
+msgstr ""
+
+#: inc/customizer-options.php:238
+msgid "Display Post Dates"
+msgstr ""
+
+#: inc/customizer-options.php:263
 msgid "Footer Text"
 msgstr ""
 
@@ -288,7 +322,7 @@ msgstr ""
 msgid "%1$s by %2$s."
 msgstr ""
 
-#: inc/mods.php:150 templates/post-showcase.php:57
+#: inc/mods.php:106 templates/post-showcase.php:57
 msgid "Read More"
 msgstr ""
 
@@ -311,6 +345,15 @@ msgstr ""
 #: inc/template-tags.php:112 inc/template-tags.php:125
 #. translators: used between list items, there is a space after the comma
 msgid ", "
+msgstr ""
+
+#: inc/theme-layouts.php:458 inc/theme-layouts.php:565
+#: inc/theme-layouts.php:650
+msgid "Layout"
+msgstr ""
+
+#: inc/theme-layouts.php:683
+msgid "Global Layout"
 msgstr ""
 
 #: inc/updater/theme-updater-admin.php:59
@@ -484,4 +527,10 @@ msgstr ""
 #: inc/template-tags.php:85
 msgctxt "post author"
 msgid "By %s"
+msgstr ""
+
+#: inc/theme-layouts.php:363
+#. Translators: Default theme layout option.
+msgctxt "theme layout"
+msgid "Default"
 msgstr ""

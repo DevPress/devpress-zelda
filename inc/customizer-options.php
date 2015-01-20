@@ -166,6 +166,64 @@ function zelda_options() {
 		'default' => 1,
 	);
 
+	// Showcase Settings
+	$section = 'showcase';
+
+	$sections[] = array(
+		'id' => $section,
+		'title' => __( 'Showcase', 'zelda' ),
+		'priority' => '80'
+	);
+
+	// Get post tags
+	$tags = array();
+	$tags[] = __( 'All Posts', 'zelda' );
+	$obj = get_tags();
+	foreach ( $obj as $tag ) {
+		$tags[$tag->slug] = $tag->name;
+	}
+
+	$options['showcase-tag'] = array(
+		'id' => 'showcase-tag',
+		'label'   => __( 'Showcase Tag', 'zelda' ),
+		'description'   => __( 'This is for the "Post Showcase" template. Select "All Posts" to show the most recent five.', 'zelda' ),
+		'section' => $section,
+		'type'    => 'select',
+		'choices' => $tags,
+		'default' => ''
+	);
+
+	// Get pages
+	$pages = array();
+	$pages[''] = __( 'Select Page', 'zelda' );
+	$obj = get_pages( 'sort_column=post_parent,menu_order' );
+	foreach ( $obj as $page) {
+		$pages[$page->ID] = $page->post_title;
+	}
+
+	$options['showcase-page-1'] = array(
+		'id' => 'showcase-page-1',
+		'label'   => __( 'Showcase Pages', 'zelda' ),
+		'description'   => __( 'This is for the "Page Showcase" template. Select up to five.', 'zelda' ),
+		'section' => $section,
+		'type'    => 'select',
+		'choices' => $pages,
+		'default' => ''
+	);
+
+	for ( $count = 2; $count <= 5; $count++ ) {
+
+		$options['showcase-page-' . $count] = array(
+			'id' => 'showcase-page-' . $count,
+			'section' => $section,
+			'type'    => 'select',
+			'choices' => $pages,
+			'default' => ''
+		);
+
+
+	}
+
 	// Post Settings
 	$section = 'post';
 
@@ -213,6 +271,8 @@ function zelda_options() {
 
 	$customizer_library = Customizer_Library::Instance();
 	$customizer_library->add_options( $options );
+
+	customizer_library_remove_theme_mods();
 
 }
 add_action( 'init', 'zelda_options', 100 );

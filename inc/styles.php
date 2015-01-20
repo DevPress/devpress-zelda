@@ -109,6 +109,7 @@ function zelda_styles() {
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
 				'.primary-navigation a',
+				'.widget-title'
 			),
 			'declarations' => array(
 				'border-color' => $color
@@ -127,10 +128,12 @@ function zelda_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
+				'.site-title a',
 				'.widget a',
 				'#colophon a',
 				'.primary-navigation a',
 				'.primary-navigation ul ul a:hover',
+				'.menu-toggle'
 			),
 			'declarations' => array(
 				'color' => $color
