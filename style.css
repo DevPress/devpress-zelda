@@ -647,6 +647,7 @@ a:active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: pointer;
+  transition: -webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
   color: #fff;
 }
@@ -693,7 +694,9 @@ a:active {
 /* Small Screen Sizes */
 @media screen and (max-width: 1039px) {
   .dropdown-toggle.toggled:after {
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
 }
 /* Large Screen Sizes */

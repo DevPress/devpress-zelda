@@ -140,7 +140,7 @@ function zelda_options() {
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => customizer_library_get_font_choices(),
-		'default' => 'Crimson Text'
+		'default' => 'Verdana'
 	);
 
 	$options['secondary-font'] = array(
@@ -160,6 +160,16 @@ function zelda_options() {
 		'choices' => customizer_library_get_font_choices(),
 		'variants' => array( '900' ),
 		'default' => 'Raleway'
+	);
+
+	$options['font-subset'] = array(
+		'id' => 'font-subset',
+		'label'   => __( 'Google Font Subset', 'zelda' ),
+		'description'   => __( 'Not all fonts provide each of these subsets.', 'zelda' ),
+		'section' => $section,
+		'type'    => 'select',
+		'choices' => customizer_library_get_google_font_subsets(),
+		'default' => 'latin'
 	);
 
 	// Archive Settings
@@ -313,3 +323,13 @@ function zelda_customizer_defaults( $wp_customize ) {
 
 }
 add_action( 'customize_register', 'zelda_customizer_defaults', 100 );
+
+
+function zelda_get_standard_fonts( $fonts ) {
+	$fonts['verdana'] = array(
+		'label' => 'Verdana',
+		'stack' => 'Verdana, sans-serif'
+	);
+	return $fonts;
+}
+add_filter( 'customizer_library_get_standard_fonts', 'zelda_get_standard_fonts', 100 );

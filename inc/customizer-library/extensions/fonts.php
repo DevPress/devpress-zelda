@@ -15,9 +15,20 @@ if ( ! function_exists( 'customizer_library_get_all_fonts' ) ) :
  * @return array    All available fonts.
  */
 function customizer_library_get_all_fonts() {
+
+	$heading1       = array( 1 => array( 'label' => sprintf( '--- %s ---', __( 'Standard Fonts', 'zelda' ) ) ) );
 	$standard_fonts = customizer_library_get_standard_fonts();
+	$heading2       = array( 2 => array( 'label' => sprintf( '--- %s ---', __( 'Google Fonts', 'zelda' ) ) ) );
 	$google_fonts   = customizer_library_get_google_fonts();
-	return apply_filters( 'customizer_library_all_fonts', array_merge( $standard_fonts, $google_fonts ) );
+
+	/**
+	 * Allow for developers to modify the full list of fonts.
+	 *
+	 * @since 1.2.3.
+	 *
+	 * @param array    $fonts    The list of all fonts.
+	 */
+	return apply_filters( 'customizer_library_all_fonts', array_merge( $heading1, $standard_fonts, $heading2, $google_fonts ) );
 }
 endif;
 
@@ -161,7 +172,7 @@ function customizer_library_choose_google_font_variants( $font, $variants = arra
 		$chosen_variants[] = 'italic';
 	}
 
-	// Only add "900" if it exists
+	// Only add "800" if it exists
 	if ( in_array( '800', $variants ) ) {
 		$chosen_variants[] = '800';
 	}
@@ -179,20 +190,20 @@ if ( ! function_exists( 'customizer_library_get_standard_fonts' ) ) :
  * @return array    Standard websafe fonts.
  */
 function customizer_library_get_standard_fonts() {
-	return array(
+	return apply_filters( 'customizer_library_get_standard_fonts', array(
 		'serif' => array(
-			'label' => _x( 'Serif', 'font style', 'zelda' ),
+			'label' => _x( 'Serif', 'font style', 'make' ),
 			'stack' => 'Georgia,Times,"Times New Roman",serif'
 		),
 		'sans-serif' => array(
-			'label' => _x( 'Sans Serif', 'font style', 'zelda' ),
+			'label' => _x( 'Sans Serif', 'font style', 'make' ),
 			'stack' => '"Helvetica Neue",Helvetica,Arial,sans-serif'
 		),
 		'monospace' => array(
-			'label' => _x( 'Monospaced', 'font style', 'zelda' ),
+			'label' => _x( 'Monospaced', 'font style', 'make' ),
 			'stack' => 'Monaco,"Lucida Sans Typewriter","Lucida Typewriter","Courier New",Courier,monospace'
 		)
-	);
+	) );
 }
 endif;
 

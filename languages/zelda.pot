@@ -112,7 +112,7 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:115 inc/customizer-options.php:279
+#: functions.php:115 inc/customizer-options.php:289
 msgid "Footer"
 msgstr ""
 
@@ -124,43 +124,51 @@ msgstr ""
 msgid "Menu"
 msgstr ""
 
-#: inc/customizer-library/extensions/fonts.php:115
+#: inc/customizer-library/extensions/fonts.php:19
+msgid "Standard Fonts"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:21
+msgid "Google Fonts"
+msgstr ""
+
+#: inc/customizer-library/extensions/fonts.php:126
 msgid "All"
 msgstr ""
 
-#: inc/customizer-library/extensions/fonts.php:116
+#: inc/customizer-library/extensions/fonts.php:127
 msgid "Cyrillic"
 msgstr ""
 
-#: inc/customizer-library/extensions/fonts.php:117
+#: inc/customizer-library/extensions/fonts.php:128
 msgid "Cyrillic Extended"
 msgstr ""
 
-#: inc/customizer-library/extensions/fonts.php:118
+#: inc/customizer-library/extensions/fonts.php:129
 msgid "Devanagari"
 msgstr ""
 
-#: inc/customizer-library/extensions/fonts.php:119
+#: inc/customizer-library/extensions/fonts.php:130
 msgid "Greek"
 msgstr ""
 
-#: inc/customizer-library/extensions/fonts.php:120
+#: inc/customizer-library/extensions/fonts.php:131
 msgid "Greek Extended"
 msgstr ""
 
-#: inc/customizer-library/extensions/fonts.php:121
+#: inc/customizer-library/extensions/fonts.php:132
 msgid "Khmer"
 msgstr ""
 
-#: inc/customizer-library/extensions/fonts.php:122
+#: inc/customizer-library/extensions/fonts.php:133
 msgid "Latin"
 msgstr ""
 
-#: inc/customizer-library/extensions/fonts.php:123
+#: inc/customizer-library/extensions/fonts.php:134
 msgid "Latin Extended"
 msgstr ""
 
-#: inc/customizer-library/extensions/fonts.php:124
+#: inc/customizer-library/extensions/fonts.php:135
 msgid "Vietnamese"
 msgstr ""
 
@@ -236,61 +244,69 @@ msgstr ""
 msgid "Tertiary Font"
 msgstr ""
 
-#: inc/customizer-options.php:170
+#: inc/customizer-options.php:167
+msgid "Google Font Subset"
+msgstr ""
+
+#: inc/customizer-options.php:168
+msgid "Not all fonts provide each of these subsets."
+msgstr ""
+
+#: inc/customizer-options.php:180
 msgid "Archive"
 msgstr ""
 
-#: inc/customizer-options.php:176
+#: inc/customizer-options.php:186
 msgid "Display Excerpts"
 msgstr ""
 
-#: inc/customizer-options.php:177
+#: inc/customizer-options.php:187
 msgid "Display excerpts instead of full content."
 msgstr ""
 
-#: inc/customizer-options.php:185 inc/customizer-options.php:268
+#: inc/customizer-options.php:195 inc/customizer-options.php:278
 msgid "Display Featured Images"
 msgstr ""
 
-#: inc/customizer-options.php:196
+#: inc/customizer-options.php:206
 msgid "Showcase"
 msgstr ""
 
-#: inc/customizer-options.php:202
+#: inc/customizer-options.php:212
 msgid "All Posts"
 msgstr ""
 
-#: inc/customizer-options.php:210
+#: inc/customizer-options.php:220
 msgid "Showcase Tag"
 msgstr ""
 
-#: inc/customizer-options.php:211
+#: inc/customizer-options.php:221
 msgid ""
 "This is for the \"Post Showcase\" template. Select \"All Posts\" to show "
 "the most recent five."
 msgstr ""
 
-#: inc/customizer-options.php:220
+#: inc/customizer-options.php:230
 msgid "Select Page"
 msgstr ""
 
-#: inc/customizer-options.php:228
+#: inc/customizer-options.php:238
 msgid "Showcase Pages"
 msgstr ""
 
-#: inc/customizer-options.php:229
+#: inc/customizer-options.php:239
 msgid "This is for the \"Page Showcase\" template. Select up to five."
 msgstr ""
 
-#: inc/customizer-options.php:254
+#: inc/customizer-options.php:264
 msgid "Post"
 msgstr ""
 
-#: inc/customizer-options.php:260
+#: inc/customizer-options.php:270
 msgid "Display Post Dates"
 msgstr ""
 
-#: inc/customizer-options.php:285
+#: inc/customizer-options.php:295
 msgid "Footer Text"
 msgstr ""
 
@@ -517,17 +533,17 @@ msgid_plural "%1$s Responses"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/customizer-library/extensions/fonts.php:184
+#: inc/customizer-library/extensions/fonts.php:195
 msgctxt "font style"
 msgid "Serif"
 msgstr ""
 
-#: inc/customizer-library/extensions/fonts.php:188
+#: inc/customizer-library/extensions/fonts.php:199
 msgctxt "font style"
 msgid "Sans Serif"
 msgstr ""
 
-#: inc/customizer-library/extensions/fonts.php:192
+#: inc/customizer-library/extensions/fonts.php:203
 msgctxt "font style"
 msgid "Monospaced"
 msgstr ""
