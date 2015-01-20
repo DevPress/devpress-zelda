@@ -118,9 +118,19 @@ add_action( 'wp_head', 'zelda_display_favicons' );
  *
  * @since Zelda 0.1
  */
-
 function zelda_excerpt_more( $more ) {
+   global $post;
+   return '[…]<p class="read-more"><a href="' . get_permalink( $post->ID ) . '">' . __( 'Read More', 'zelda' ) . '</a></p>';
+}
+add_filter( 'excerpt_more', 'zelda_excerpt_more' );
+
+/**
+ * Custom More Text
+ *
+ * @since Zelda 0.1
+ */
+function zelda_content_more() {
    global $post;
    return '<p class="read-more"><a href="' . get_permalink( $post->ID ) . '">' . __( 'Read More', 'zelda' ) . '</a></p>';
 }
-add_filter( 'excerpt_more', 'zelda_excerpt_more' );
+add_filter( 'the_content_more_link', 'zelda_content_more' );

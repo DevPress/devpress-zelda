@@ -257,7 +257,7 @@ a:active {
 	z-index: 1;
 	display: block;
 	content: '';
-	box-shadow: inset 0 0 100px rgba(0,0,0,.2);
+	box-shadow: inset 0 0 50px rgba(0,0,0,.1);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -387,6 +387,13 @@ a:active {
 .template-showcase .entry-image {
 	margin: 0 0 15px;
 	padding: 0;
+}
+.template-showcase .fallback-thumbnail {
+	background: $primary-link-color;
+	padding: 25%;
+}
+.template-showcase .featured-1 .fallback-thumbnail {
+	padding: 15%;
 }
 .template-showcase .entry-header {
 	padding: 0 15px;

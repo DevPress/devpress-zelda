@@ -25,7 +25,6 @@ get_header(); ?>
 		$args = array(
 			'posts_per_page' => 5,
 			'post_type' => 'page',
-			'meta_key' => '_thumbnail_id',
 			'post__in' => $pages
 		);
 
@@ -34,22 +33,34 @@ get_header(); ?>
 		if ( $query->have_posts() ) :
 			$count = 1;
 			while ( $query->have_posts() ) : $query->the_post();
-			$thumbnail = 'zelda-showcase';
 
-			if ( 1 == $count ) {
-				$thumbnail = array( 780, 780, true );
-			}
-			?>
+				// Set default image sizes to use
+				$thumbnail = 'zelda-showcase';
+				$width = 480;
+
+				// If it's the first post, use large image size
+				if ( 1 == $count ) {
+					$thumbnail = 'zelda-showcase-large';
+					$width = 780;
+				}
+
+				// If no image is set, we'll use a fallback image
+				if ( has_post_thumbnail() ) {
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id(), $thumbnail, true )[0];
+					$class = "image-thumbnail";
+				} else {
+					$image = get_template_directory_uri() . '/images/post.svg';
+					$class = 'fallback-thumbnail';
+				}
+				?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class( 'featured-' . $count ); ?>>
 
-					<?php if ( has_post_thumbnail() ) { ?>
 					<a href="<?php the_permalink(); ?>" class="entry-image-link">
-						<figure class="entry-image">
-							<?php the_post_thumbnail( $thumbnail ); ?>
+						<figure class="entry-image <?php echo $class; ?>">
+							<img src="<?php echo $image; ?>" style="width:<?php echo $width; ?>">
 						</figure>
 					</a>
-					<?php } ?>
 
 					<header class="entry-header">
 						<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
@@ -57,7 +68,17 @@ get_header(); ?>
 
 					<?php if ( 1 == $count ) : ?>
 					<div class="entry-summary clearfix">
-						<?php the_excerpt(); ?>
+						<?php
+						if ( has_excerpt() ) :
+							the_excerpt();
+						elseif ( @strpos( $post->post_content, '<!--more-->') ) :
+							the_content();
+						elseif ( str_word_count( $post->post_content ) < 100 ) :
+							the_content();
+						else:
+							the_excerpt();
+						endif;
+						?>
 					</div><!-- .entry-content -->
 					<?php endif; ?>
 
