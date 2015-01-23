@@ -111,17 +111,6 @@ function zelda_widgets_init() {
 		'after_title'   => '</h3>',
 	) );
 
-	register_sidebar( array(
-		'name'          => __( 'Footer', 'zelda' ),
-		'id'            => 'footer',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-
-
 }
 add_action( 'widgets_init', 'zelda_widgets_init' );
 
@@ -143,7 +132,7 @@ function zelda_fonts() {
 	wp_enqueue_style( 'zelda-body-fonts', $font_uri, array(), null, 'screen' );
 
 	// Icon Font
-	wp_enqueue_style( 'zelda-icons', get_template_directory_uri() . '/fonts/zelda-icons.css', array(), '0.1.0' );
+	wp_enqueue_style( 'zelda-icons', get_template_directory_uri() . '/fonts/zelda-icons.css', array(), '1.0.0' );
 
 }
 add_action( 'wp_enqueue_scripts', 'zelda_fonts' );

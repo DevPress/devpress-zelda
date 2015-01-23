@@ -253,7 +253,6 @@ function zelda_options() {
 			'default' => ''
 		);
 
-
 	}
 
 	// Post Settings

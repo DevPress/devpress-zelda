@@ -112,10 +112,6 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:115 inc/customizer-options.php:289
-msgid "Footer"
-msgstr ""
-
 #: header.php:23
 msgid "Skip to content"
 msgstr ""
@@ -264,7 +260,7 @@ msgstr ""
 msgid "Display excerpts instead of full content."
 msgstr ""
 
-#: inc/customizer-options.php:195 inc/customizer-options.php:278
+#: inc/customizer-options.php:195 inc/customizer-options.php:277
 msgid "Display Featured Images"
 msgstr ""
 
@@ -298,15 +294,19 @@ msgstr ""
 msgid "This is for the \"Page Showcase\" template. Select up to five."
 msgstr ""
 
-#: inc/customizer-options.php:264
+#: inc/customizer-options.php:263
 msgid "Post"
 msgstr ""
 
-#: inc/customizer-options.php:270
+#: inc/customizer-options.php:269
 msgid "Display Post Dates"
 msgstr ""
 
-#: inc/customizer-options.php:295
+#: inc/customizer-options.php:288
+msgid "Footer"
+msgstr ""
+
+#: inc/customizer-options.php:294
 msgid "Footer Text"
 msgstr ""
 

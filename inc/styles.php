@@ -15,6 +15,35 @@ if ( ! function_exists( 'zelda_styles' ) && class_exists( 'Customizer_Library_St
  */
 function zelda_styles() {
 
+	// Primary Background Color
+	$setting = 'background_color';
+	$mod = get_theme_mod( $setting, '#322222' );
+	$mod = '#' . ltrim( $mod, '#' );
+
+	if ( $mod !== '#322222' ) :
+
+		$color = sanitize_hex_color( $mod );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.primary-navigation ul ul'
+			),
+			'declarations' => array(
+				'background' => $color
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.primary-navigation ul ul:before'
+			),
+			'declarations' => array(
+				'border-bottom-color' => $color
+			)
+		) );
+
+	endif;
+
 	// Primary Link Color
 	$setting = 'primary-link-color';
 	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
@@ -28,11 +57,24 @@ function zelda_styles() {
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
 				'a',
-				'#content blockquote:after',
-				'button, .button, input[type="button"], input[type="reset"], input[type="submit"]'
+				'#content blockquote:after'
 			),
 			'declarations' => array(
 				'color' => $color
+			)
+		) );
+
+		// Button Colors
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'button',
+				'.button',
+				'input[type="button"]',
+				'input[type="reset"]',
+				'input[type="submit"]'
+			),
+			'declarations' => array(
+				'background-color' => $mod
 			)
 		) );
 
@@ -64,7 +106,8 @@ function zelda_styles() {
 			'selectors' => array(
 				'#page',
 				'#colophon',
-				'.primary-navigation ul ul a:hover'
+				'.primary-navigation ul ul a:hover',
+				'#reply-title'
 			),
 			'declarations' => array(
 				'background' => $color
@@ -79,6 +122,15 @@ function zelda_styles() {
 			),
 			'declarations' => array(
 				'border-color' => $color
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'.site-main:before'
+			),
+			'declarations' => array(
+				'border-color' => '#F8F8F8' . $color
 			)
 		) );
 
@@ -98,7 +150,8 @@ function zelda_styles() {
 				'.secondary .widget',
 				'.widget-title',
 				'#colophon',
-				'.primary-navigation a:hover'
+				'.primary-navigation a:hover',
+				'#reply-title'
 			),
 			'declarations' => array(
 				'color' => $color
@@ -112,6 +165,16 @@ function zelda_styles() {
 			),
 			'declarations' => array(
 				'border-color' => $color
+			)
+		) );
+
+		Customizer_Library_Styles()->add( array(
+			'selectors' => array(
+				'#respond',
+				'.widget_search .search-form'
+			),
+			'declarations' => array(
+				'background' => $color
 			)
 		) );
 
@@ -132,7 +195,9 @@ function zelda_styles() {
 				'#colophon a',
 				'.primary-navigation a',
 				'.primary-navigation ul ul a:hover',
-				'.menu-toggle'
+				'.menu-toggle',
+				'#respond',
+				'.widget_search input[type="search"]'
 			),
 			'declarations' => array(
 				'color' => $color
@@ -150,9 +215,7 @@ function zelda_styles() {
 
 		Customizer_Library_Styles()->add( array(
 			'selectors' => array(
-				'body',
-				'.comments-title',
-				'#reply-title'
+				'body'
 			),
 			'declarations' => array(
 				'font-family' => $stack
