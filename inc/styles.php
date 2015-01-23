@@ -71,7 +71,8 @@ function zelda_styles() {
 				'.button',
 				'input[type="button"]',
 				'input[type="reset"]',
-				'input[type="submit"]'
+				'input[type="submit"]',
+				'.template-showcase .fallback-thumbnail'
 			),
 			'declarations' => array(
 				'background-color' => $mod
