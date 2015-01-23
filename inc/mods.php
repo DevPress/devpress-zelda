@@ -12,10 +12,10 @@
  */
 function zelda_get_default_footer_text() {
 	$text = sprintf(
-		__( 'Powered by %s', 'zelda' ),
+		__( 'Powered by %s.', 'zelda' ),
 		'<a href="' . esc_url( __( 'http://wordpress.org/', 'zelda' ) ) . '">WordPress</a>'
 	);
-	$text .= '<span class="sep"> | </span>';
+	$text .= ' ';
 	$text .= sprintf(
 		__( '%1$s by %2$s.', 'zelda' ),
 			'Zelda Theme',

@@ -133,11 +133,6 @@ function zelda_fonts() {
 	// Font options
 	$fonts = array();
 
-	// Site title font only required when logo not in use
-	if ( ! get_theme_mod( 'logo', 0 ) ) :
-		$fonts[0] = get_theme_mod( 'site-title-font', customizer_library_get_default( 'site-title-font' ) );
-	endif;
-
 	$fonts[1] = get_theme_mod( 'primary-font', customizer_library_get_default( 'primary-font' ) );
 	$fonts[2] = get_theme_mod( 'secondary-font', customizer_library_get_default( 'secondary-font' ) );
 	$fonts[3] = get_theme_mod( 'tertiary-font', customizer_library_get_default( 'tertiary-font' ) );

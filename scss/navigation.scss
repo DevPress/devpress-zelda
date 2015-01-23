@@ -3,7 +3,7 @@
 	max-width: 75%;
 }
 .primary-navigation {
-	font-size: 17px;
+	font-size: 16px;
 	font-family: $tertiary-font;
 }
 .primary-navigation ul {
@@ -106,22 +106,24 @@
 	}
 }
 
-/* Large Screen Sizes */
+/* Large Screen Sizes
+-------------------------------------------------------------- */
+
 @media screen and ( min-width: 1040px ) {
 	.site-branding {
-		max-width: 50%;
+		max-width: 40%;
+		padding-right: 30px;
 	}
 	.primary-navigation {
 		clear:none;
-		max-width: 50%;
+		max-width: 60%;
 		float:right;
 		margin-top: 6px;
 		font-weight: 800;
 		letter-spacing: -.01em;
-		font-size:17px;
+		font-size:16px;
 		text-transform: uppercase;
-	}
-	.site-description-active .primary-navigation {
+		text-align: right;
 	}
 	.primary-navigation .nav-menu {
 		padding-top: 0;
@@ -138,27 +140,28 @@
 	}
 	.primary-navigation li {
 		display: inline-block;
+		padding-bottom: 10px;
 	}
 	.primary-navigation a {
 		display: inline-block;
 		border: none;
 		border-left: 1px solid $secondary-text-color;
-		padding: 10px 16px;
+		padding: 2px 12px;
 	}
 	.primary-navigation a:hover {
 		color: $secondary-text-color;
 	}
 	.primary-navigation .menu-item-has-children > a {
-		padding: 10px 16px;
+		padding: 2px 12px;
 	}
 	.primary-navigation ul ul {
 		display: none;
 		background: $primary-background-color;
 		position: absolute;
-		width:220px;
+		width: 220px;
 		left: 50%;
 		margin-left: -110px;
-		top:45px;
+		top: 34px;
 		z-index: 99999;
 		border: 1px solid $secondary-background-color;
 		border-radius: 3px;
@@ -186,6 +189,7 @@
 	.primary-navigation ul ul li {
 		display: block;
 		margin:0;
+		padding: 0;
 	}
 	.primary-navigation ul ul a {
 		border: none;
@@ -210,70 +214,74 @@
 	.primary-navigation ul ul ul:before {
 		display: none;
 	}
+}
 
-	/* Social */
-	.primary-navigation .social > a {
+/* Social Menu
+-------------------------------------------------------------- */
+
+.site-navigation .social span {
+	margin: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+.site-navigation .social a:before {
+	display: inline-block;
+	font-family: 'zelda-icons';
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.site-navigation .social a[href*="behance.com"]:before {
+	content: '\f1b4';
+}
+.site-navigation .social a[href*="dribbble.com"]:before {
+	content: '\f17d';
+}
+.site-navigation .social a[href*="facebook.com"]:before {
+	content: '\f09a';
+}
+.site-navigation .social a[href*="flickr.com"]:before {
+	content: '\f16e';
+}
+.site-navigation .social a[href*="github.com"]:before {
+	content: '\f09b';
+}
+.site-navigation .social a[href*="linkedin.com"]:before {
+	content: '\f0e1';
+}
+.site-navigation .social a[href*="pinterest.com"]:before {
+	content: '\f0d2';
+}
+.site-navigation .social a[href*="plus.google.com"]:before {
+	content: '\f0d5';
+}
+.site-navigation .social a[href*="instagr.am"]:before,
+.site-navigation .social a[href*="instagram.com"]:before {
+	content: '\f16d';
+}
+.site-navigation .social a[href*="skype.com"]:before {
+	content: '\f17e';
+}
+.site-navigation .social a[href*="spotify.com"]:before {
+	content: '\f1bc';
+}
+.site-navigation .social a[href*="tumblr.com"]:before {
+	content: '\f173';
+}
+.site-navigation .social a[href*="twitter.com"]:before {
+	content: '\f099';
+}
+.site-navigation .social a[href*="vimeo.com"]:before {
+	content: '\f194';
+}
+
+@media screen and ( min-width: 1040px ) {
+	.site-navigation .social > a {
 		display: inline-block;
 	}
-	.primary-navigation .social span {
-		margin: 0;
-		clip: rect(1px, 1px, 1px, 1px);
-		position: absolute !important;
-		height: 1px;
-		width: 1px;
-		overflow: hidden;
-	}
-	.primary-navigation .social a:before {
-		display: inline-block;
-		font-family: 'zelda-icons';
-		font-style: normal;
-		font-weight: normal;
-		line-height: 1;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-	}
-	.primary-navigation .social a[href*="behance.com"]:before {
-		content: '\f1b4';
-	}
-	.primary-navigation .social a[href*="dribbble.com"]:before {
-		content: '\f17d';
-	}
-	.primary-navigation .social a[href*="facebook.com"]:before {
-		content: '\f09a';
-	}
-	.primary-navigation .social a[href*="flickr.com"]:before {
-		content: '\f16e';
-	}
-	.primary-navigation .social a[href*="github.com"]:before {
-		content: '\f09b';
-	}
-	.primary-navigation .social a[href*="linkedin.com"]:before {
-		content: '\f0e1';
-	}
-	.primary-navigation .social a[href*="pinterest.com"]:before {
-		content: '\f0d2';
-	}
-	.primary-navigation .social a[href*="plus.google.com"]:before {
-		content: '\f0d5';
-	}
-	.primary-navigation .social a[href*="instagr.am"]:before,
-	.primary-navigation .social a[href*="instagram.com"]:before {
-		content: '\f16d';
-	}
-	.primary-navigation .social a[href*="skype.com"]:before {
-		content: '\f17e';
-	}
-	.primary-navigation .social a[href*="spotify.com"]:before {
-		content: '\f1bc';
-	}
-	.primary-navigation .social a[href*="tumblr.com"]:before {
-		content: '\f173';
-	}
-	.primary-navigation .social a[href*="twitter.com"]:before {
-		content: '\f099';
-	}
-	.primary-navigation .social a[href*="vimeo.com"]:before {
-		content: '\f194';
-	}
-
 }

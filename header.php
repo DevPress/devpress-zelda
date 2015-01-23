@@ -62,7 +62,7 @@
 		</div>
 
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
-		<nav class="primary-navigation" role="navigation">
+		<nav class="primary-navigation site-navigation" role="navigation">
 			<div class="menu-toggle"><?php _e( 'Menu', 'focus' ); ?></div>
 			<?php wp_nav_menu( array(
 				'theme_location' => 'primary',

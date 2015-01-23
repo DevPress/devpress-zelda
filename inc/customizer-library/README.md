@@ -264,6 +264,20 @@ if ( $mod != customizer_library_get_default( $setting ) ) {
 }
 ~~~
 
+You can also change the font defaults using filters. For example, here's how you could add "Verdana" as one of the default font options:
+
+~~~php
+function prefix_get_standard_fonts( $fonts ) {
+	$fonts['verdana'] = array(
+		'label' => 'Verdana',
+		'stack' => 'Verdana, sans-serif'
+	);
+	return $fonts;
+}
+add_filter( 'customizer_library_get_standard_fonts', 'prefix_get_standard_fonts', 100 );
+~~~
+
+
 ## Changelog
 
 1.2.0

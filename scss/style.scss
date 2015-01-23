@@ -199,7 +199,7 @@ a:active {
 	font-size: 18px;
 	line-height: 1;
 	margin:0;
-	margin-top:10px;
+	margin-top:5px;
 }
 .site-title,
 .site-description {
@@ -238,11 +238,14 @@ a:active {
 	text-transform: uppercase;
 }
 .entry-meta {
-	color:#999;
+	color:#aaa;
 	font-size: 12px;
 }
 .entry-meta a {
-	color: #999;
+	color: #aaa;
+}
+.entry-header-meta {
+	font-size: 11px;
 }
 .entry-image-section {
 	position: relative;
@@ -419,7 +422,7 @@ a:active {
 	margin: 0 0 15px;
 }
 .template-showcase .featured-1 .entry-meta {
-	font-size: 12px;
+	font-size: 11px;
 }
 .template-showcase .featured-1 .entry-title {
 	font-size: 34px;
@@ -755,15 +758,32 @@ a:active {
 /* Footer
 --------------------------------------------------------------*/
 
-
 #colophon {
-	font-size: 13px;
-	padding: 20px 30px;
+	font-size: 12px;
+	padding: 20px 30px 5px;
 	background: $secondary-background-color;
 	color: $secondary-text-color;
+	letter-spacing: -0.04em;
+	text-transform: uppercase;
 }
 #colophon a {
 	color: $secondary-link-color;
+}
+.site-info {
+	margin-bottom: 10px;
+}
+.footer-navigation ul {
+	list-style: none;
+}
+.footer-navigation li {
+	display: inline-block;
+	line-height: 1;
+	margin-right: 6px;
+	padding-right: 6px;
+	border-right: 1px dotted $secondary-text-color;
+}
+.footer-navigation ul li:last-of-type {
+	border: none;
 }
 
 /* Accessibility

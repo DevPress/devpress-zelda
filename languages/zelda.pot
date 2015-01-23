@@ -76,11 +76,11 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: content-page.php:18 content-single.php:27 content.php:30
+#: content-page.php:18 content-single.php:26 content.php:30
 msgid "Pages:"
 msgstr ""
 
-#: content-single.php:41
+#: content-single.php:40
 msgid "About %s"
 msgstr ""
 
@@ -339,7 +339,7 @@ msgid "Comment *"
 msgstr ""
 
 #: inc/mods.php:15
-msgid "Powered by %s"
+msgid "Powered by %s."
 msgstr ""
 
 #: inc/mods.php:16

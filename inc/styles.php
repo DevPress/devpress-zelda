@@ -98,7 +98,6 @@ function zelda_styles() {
 				'.secondary .widget',
 				'.widget-title',
 				'#colophon',
-				'.primary-navigation a',
 				'.primary-navigation a:hover'
 			),
 			'declarations' => array(
