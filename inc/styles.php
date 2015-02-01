@@ -131,7 +131,7 @@ function zelda_styles() {
 				'.site-main:before'
 			),
 			'declarations' => array(
-				'border-color' => '#F8F8F8' . $color
+				'border-color' => '#f6f6f6' . $color
 			)
 		) );
 
