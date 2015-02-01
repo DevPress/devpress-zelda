@@ -93,12 +93,29 @@ function zelda_options() {
 		'priority' => '80'
 	);
 
+	$color_schemes = array(
+		'default' => __( 'Default', 'zelda' ),
+		'cool' => __( 'Cool', 'zelda' ),
+		'neutral' => __( 'Neutral', 'zelda' )
+	);
+
+	$options['color-scheme'] = array(
+		'id' => 'color-scheme',
+		'label'   => __( 'Color Scheme', 'zelda' ),
+		'section' => $section,
+		'type'    => 'select',
+		'choices' => $color_schemes,
+		'default' => 'default',
+		'priority' => '1'
+	);
+
 	$options['primary-link-color'] = array(
 		'id' => 'primary-link-color',
 		'label'   => __( 'Primary Link Color', 'zelda' ),
 		'section' => $section,
 		'type'    => 'color',
 		'default' => $primary_link_color,
+		'priority' => '100'
 	);
 
 	$options['secondary-shade-1'] = array(
@@ -107,6 +124,7 @@ function zelda_options() {
 		'section' => $section,
 		'type'    => 'color',
 		'default' => $secondary_shade_1,
+		'priority' => '100'
 	);
 
 	$options['secondary-text-color'] = array(
@@ -115,6 +133,7 @@ function zelda_options() {
 		'section' => $section,
 		'type'    => 'color',
 		'default' => $secondary_shade_2,
+		'priority' => '100'
 	);
 
 	$options['secondary-link-color'] = array(
@@ -123,6 +142,7 @@ function zelda_options() {
 		'section' => $section,
 		'type'    => 'color',
 		'default' => $secondary_shade_3,
+		'priority' => '100'
 	);
 
 	// Typography
@@ -324,6 +344,14 @@ function zelda_customizer_defaults( $wp_customize ) {
 add_action( 'customize_register', 'zelda_customizer_defaults', 100 );
 
 
+/**
+ * Adds "Verdana" to the default font array
+ *
+ * @since  1.0.0.
+ *
+ * @param  array
+ * @return array
+ */
 function zelda_get_standard_fonts( $fonts ) {
 	$fonts['verdana'] = array(
 		'label' => 'Verdana',
