@@ -71,7 +71,7 @@ a:active {
 -------------------------------------------------------------- */
 
 #page {
-	background: $secondary-background-color;
+	background: $secondary-shade-1;
 	width:96%;
 	max-width:1080px;
 	margin:0 auto;
@@ -91,7 +91,7 @@ a:active {
 .site-main:before {
 	content: "";
 	display: block;
-	border-color: #F8F8F8 $secondary-background-color;
+	border-color: #F8F8F8 $secondary-shade-1;
 	border-style: solid;
 	border-width: 0 24px 24px 0;
 	position: absolute;
@@ -180,7 +180,7 @@ a:active {
 }
 .site-title a {
 	position: relative;
-	color: $secondary-link-color;
+	color: $secondary-shade-3;
 	text-decoration: none;
 }
 .site-logo {
@@ -195,7 +195,7 @@ a:active {
 	margin-right: 5px;
 }
 .site-description {
-	color: $secondary-text-color;
+	color: $secondary-shade-2;
 	font-size: 18px;
 	line-height: 1;
 	margin:0;
@@ -351,7 +351,7 @@ a:active {
 --------------------------------------------------------------*/
 
 #content blockquote {
-	border-left: 4px solid $secondary-background-color;
+	border-left: 4px solid $secondary-shade-1;
 	margin: 0 0 15px;
 	padding: 30px 30px 30px 90px;
 	position: relative;
@@ -401,6 +401,9 @@ a:active {
 .template-showcase .fallback-thumbnail {
 	background: $primary-link-color;
 	padding: 25%;
+}
+.template-showcase .featured-1 {
+	border-bottom: none;
 }
 .template-showcase .featured-1 .fallback-thumbnail {
 	padding: 15%;
@@ -522,7 +525,7 @@ a:active {
 .secondary .widget {
 	padding:15px 30px;
 	margin-bottom:15px;
-	color: $secondary-text-color;
+	color: $secondary-shade-2;
 	font-size: 13px;
 }
 .secondary .widget:last-of-type {
@@ -533,12 +536,12 @@ a:active {
 	font-weight: 800;
 	font-size:17px;
 	text-transform: uppercase;
-	border-bottom: 3px double $secondary-text-color;
+	border-bottom: 3px double $secondary-shade-2;
 	padding-bottom: 5px;
 	margin-bottom: 15px;
 }
 .widget a {
-	color: $secondary-link-color;
+	color: $secondary-shade-3;
 }
 /* Make sure select elements fit in widgets */
 .widget select {
@@ -548,14 +551,14 @@ a:active {
 /* Widget Search */
 
 .widget_search .search-form {
-	background: $secondary-text-color;
+	background: $secondary-shade-2;
 	box-shadow: inset 0 -2px rgba(0, 0, 0, 0.2);
 	border-radius: 3px;
 }
 .widget_search input[type="search"] {
 	background: transparent;
 	box-shadow: none;
-	color: $secondary-link-color;
+	color: $secondary-shade-3;
 }
 
 #calendar_wrap {
@@ -613,8 +616,12 @@ a:active {
 	border-bottom: 3px double #eee;
 }
 .comments-title {
+	margin: 0 0 15px;
 	padding: 30px 30px 0;
+	font-size: 20px;
+	font-family: $tertiary-font;
 	color:#666;
+	font-weight:400;
 }
 .no-comments {
 	margin:0;
@@ -634,11 +641,6 @@ a:active {
 }
 .comment-list .children {
 	list-style: none;
-}
-.comments-title {
-	color:#666;
-	font-weight:400;
-	margin: 0 0 15px;
 }
 .comment, .trackback, .pingback {
 	position: relative;
@@ -720,17 +722,26 @@ a:active {
 
 #respond {
 	margin: 30px;
-	background: $secondary-text-color;
-	color: $secondary-link-color;
+	background: $secondary-shade-2;
+	color: $secondary-shade-3;
 }
 #reply-title {
-	color: $secondary-text-color;
-	background: $secondary-background-color;
+	font-size: 20px;
+	font-family: $tertiary-font;
+	font-weight:400;
+	color: $secondary-shade-3;
+	background: $secondary-shade-1;
 	margin: 0;
 	padding: 10px 30px;
+	cursor: pointer;
+	text-align: center;
+}
+#reply-title:hover {
+	color: $secondary-shade-2;
 }
 #commentform {
 	padding: 20px 30px 10px;
+	display: none;
 }
 #respond p {
 	margin-bottom: 20px;
@@ -780,14 +791,14 @@ a:active {
 #colophon {
 	font-size: 12px;
 	padding: 20px 30px 5px;
-	background: $secondary-background-color;
-	color: $secondary-text-color;
+	background: $secondary-shade-1;
+	color: $secondary-shade-2;
 	letter-spacing: -0.04em;
 	text-transform: uppercase;
 	font-family: $tertiary-font;
 }
 #colophon a {
-	color: $secondary-link-color;
+	color: $secondary-shade-3;
 }
 .site-info {
 	display: inline-block;
@@ -804,7 +815,7 @@ a:active {
 	line-height: 1;
 	margin-right: 6px;
 	padding-right: 6px;
-	border-right: 1px dotted $secondary-text-color;
+	border-right: 1px dotted $secondary-shade-2;
 }
 .footer-navigation ul li:last-of-type {
 	border: none;

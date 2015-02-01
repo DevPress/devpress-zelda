@@ -24,8 +24,8 @@
 	padding: 12px 10px;
 	display: block;
 	text-decoration: none;
-	color: $secondary-link-color;
-	border-top: 1px solid $secondary-text-color;
+	color: $secondary-shade-3;
+	border-top: 1px solid $secondary-shade-2;
 }
 .primary-navigation a:hover,
 .primary-navigation li:hover a {
@@ -79,7 +79,7 @@
 	cursor: pointer;
 	float: right;
 	padding: 12px 10px 12px 0;
-	color: $secondary-link-color;
+	color: $secondary-shade-3;
 	font-weight: 600;
 	text-transform: uppercase;
 	margin-right: -12px;
@@ -145,11 +145,11 @@
 	.primary-navigation a {
 		display: inline-block;
 		border: none;
-		border-left: 1px solid $secondary-text-color;
+		border-left: 1px solid $secondary-shade-2;
 		padding: 2px 12px;
 	}
 	.primary-navigation a:hover {
-		color: $secondary-text-color;
+		color: $secondary-shade-2;
 	}
 	.primary-navigation .menu-item-has-children > a {
 		padding: 2px 12px;
@@ -163,7 +163,7 @@
 		margin-left: -110px;
 		top: 34px;
 		z-index: 99999;
-		border: 1px solid $secondary-background-color;
+		border: 1px solid $secondary-shade-1;
 		border-radius: 3px;
 		font-size: 16px;
 		text-align: center;
@@ -171,7 +171,7 @@
 		text-transform: none;
 	}
 	.primary-navigation ul ul a:hover {
-		color: $secondary-link-color;
+		color: $secondary-shade-3;
 	}
 	.primary-navigation ul ul:before {
 		position: absolute;
@@ -193,7 +193,7 @@
 	}
 	.primary-navigation ul ul a {
 		border: none;
-		border-bottom: 1px solid $secondary-background-color;
+		border-bottom: 1px solid $secondary-shade-1;
 	}
 	.primary-navigation ul ul a,
 	.primary-navigation ul li:hover ul a {
@@ -201,7 +201,7 @@
 		padding:12px 20px;
 	}
 	.primary-navigation ul ul a:hover {
-		background: $secondary-background-color;
+		background: $secondary-shade-1;
 	}
 	.primary-navigation ul ul li:last-child a {
 		border-bottom: none;

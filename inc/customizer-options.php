@@ -17,9 +17,9 @@ function zelda_options() {
 	// Theme defaults
 	$primary_background_color = '#322222';
 	$primary_link_color = '#D55C17';
-	$secondary_background_color = '#1C0F08';
-	$secondary_text_color = '#604C40';
-	$secondary_link_color = '#ffffff';
+	$secondary_shade_1 = '#1C0F08';
+	$secondary_shade_2 = '#604C40';
+	$secondary_shade_3 = '#ffffff';
 
 	// Stores all the controls that will be added
 	$options = array();
@@ -101,12 +101,12 @@ function zelda_options() {
 		'default' => $primary_link_color,
 	);
 
-	$options['secondary-background-color'] = array(
-		'id' => 'secondary-background-color',
+	$options['secondary-shade-1'] = array(
+		'id' => 'secondary-shade-1',
 		'label'   => __( 'Secondary Background Color', 'zelda' ),
 		'section' => $section,
 		'type'    => 'color',
-		'default' => $secondary_background_color,
+		'default' => $secondary_shade_1,
 	);
 
 	$options['secondary-text-color'] = array(
@@ -114,7 +114,7 @@ function zelda_options() {
 		'label'   => __( 'Secondary Text Color', 'zelda' ),
 		'section' => $section,
 		'type'    => 'color',
-		'default' => $secondary_text_color,
+		'default' => $secondary_shade_2,
 	);
 
 	$options['secondary-link-color'] = array(
@@ -122,7 +122,7 @@ function zelda_options() {
 		'label'   => __( 'Secondary Link Color', 'zelda' ),
 		'section' => $section,
 		'type'    => 'color',
-		'default' => $secondary_link_color,
+		'default' => $secondary_shade_3,
 	);
 
 	// Typography

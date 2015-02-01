@@ -32,11 +32,13 @@ get_header(); ?>
 				// Set default image sizes to use
 				$thumbnail = 'zelda-showcase';
 				$width = 480;
+				$height = 480;
 
 				// If it's the first post, use large image size
 				if ( 1 == $count ) {
 					$thumbnail = 'zelda-showcase-large';
 					$width = 780;
+					$height = 520;
 				}
 
 				// If no image is set, we'll use a fallback image
@@ -58,7 +60,7 @@ get_header(); ?>
 
 					<a href="<?php the_permalink(); ?>" class="entry-image-link">
 						<figure class="entry-image <?php echo $class; ?>">
-							<img src="<?php echo $image; ?>" style="width:<?php echo $width; ?>">
+							<img src="<?php echo esc_url( $image ); ?>" height="<?php echo $height; ?>" width="<?php echo $width; ?>">
 						</figure>
 					</a>
 
@@ -107,6 +109,8 @@ get_header(); ?>
 			<?php }
 		endif;
 		?>
+
+		<?php wp_reset_query(); ?>
 
 	</div><!-- #primary -->
 

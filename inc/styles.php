@@ -96,7 +96,7 @@ function zelda_styles() {
 	endif;
 
 	// Secondary Background Color
-	$setting = 'secondary-background-color';
+	$setting = 'secondary-shade-1';
 	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
 
 	if ( $mod !== customizer_library_get_default( $setting ) ) :
@@ -138,7 +138,7 @@ function zelda_styles() {
 	endif;
 
 	// Secondary Text Color
-	$setting = 'secondary-text-color';
+	$setting = 'secondary-shade-2';
 	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
 
 	if ( $mod !== customizer_library_get_default( $setting ) ) :
@@ -152,7 +152,7 @@ function zelda_styles() {
 				'.widget-title',
 				'#colophon',
 				'.primary-navigation a:hover',
-				'#reply-title'
+				'#reply-title:hover'
 			),
 			'declarations' => array(
 				'color' => $color
@@ -182,7 +182,7 @@ function zelda_styles() {
 	endif;
 
 	// Secondary Link Color
-	$setting = 'secondary-link-color';
+	$setting = 'secondary-shade-3';
 	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
 
 	if ( $mod !== customizer_library_get_default( $setting ) ) :
@@ -197,6 +197,7 @@ function zelda_styles() {
 				'.primary-navigation a',
 				'.primary-navigation ul ul a:hover',
 				'.menu-toggle',
+				'#reply-title',
 				'#respond',
 				'.widget_search input[type="search"]'
 			),
@@ -255,6 +256,8 @@ function zelda_styles() {
 			'selectors' => array(
 				'.widget-title',
 				'.primary-navigation',
+				'.comments-title',
+				'#reply-title'
 			),
 			'declarations' => array(
 				'font-family' => $stack

@@ -49,7 +49,7 @@ function zelda_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 780, 1200 );
 	add_image_size( 'zelda-showcase', 480, 480, true );
-	add_image_size( 'zelda-showcase-large', 780, 780, true );
+	add_image_size( 'zelda-showcase-large', 780, 520, true );
 
 	// Registers menu above the site title
 	register_nav_menus( array(

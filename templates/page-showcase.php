@@ -25,7 +25,8 @@ get_header(); ?>
 		$args = array(
 			'posts_per_page' => 5,
 			'post_type' => 'page',
-			'post__in' => $pages
+			'post__in' => $pages,
+			'orderby' => 'post__in'
 		);
 
 		$query = new WP_Query( $args );
@@ -37,11 +38,13 @@ get_header(); ?>
 				// Set default image sizes to use
 				$thumbnail = 'zelda-showcase';
 				$width = 480;
+				$height = 480;
 
-				// If it's the first post, use large image size
+				// If it's the first page, use large image size
 				if ( 1 == $count ) {
 					$thumbnail = 'zelda-showcase-large';
 					$width = 780;
+					$height = 520;
 				}
 
 				// If no image is set, we'll use a fallback image
@@ -58,7 +61,7 @@ get_header(); ?>
 
 					<a href="<?php the_permalink(); ?>" class="entry-image-link">
 						<figure class="entry-image <?php echo $class; ?>">
-							<img src="<?php echo $image; ?>" style="width:<?php echo $width; ?>">
+							<img src="<?php echo esc_url( $image ); ?>" height="<?php echo $height; ?>" width="<?php echo $width; ?>">
 						</figure>
 					</a>
 
@@ -96,14 +99,19 @@ get_header(); ?>
 			$count++;
 			endwhile;
 		else :
-			if ( current_user_can( 'edit_posts' ) ) { ?>
+			if ( current_user_can( 'customize' ) ) { ?>
 				<div class="admin-msg">
-					<p><?php _e( 'Sorry, there are no posts available to display.', 'zelda' ); ?></p>
-					<p><?php _e( 'Make featured images are set and there are enough posts published for the selected tag.', 'zelda' ); ?></p>
+					<p><?php _e( 'There are no pages available to display.', 'zelda' ); ?></p>
+					<p><?php printf(
+						__( 'These pages can be set in the <a href="%s">customizer</a>.', 'zelda' ),
+						admin_url( 'customize.php?autofocus[control]=showcase-tag' )
+					); ?></p>
 				</div>
 			<?php }
 		endif;
 		?>
+
+		<?php wp_reset_query(); ?>
 
 	</div><!-- #primary -->
 

@@ -350,8 +350,8 @@ msgstr ""
 msgid "%1$s by %2$s."
 msgstr ""
 
-#: inc/mods.php:123 inc/mods.php:134 templates/page-showcase.php:88
-#: templates/post-showcase.php:91
+#: inc/mods.php:123 inc/mods.php:134 templates/page-showcase.php:91
+#: templates/post-showcase.php:93
 msgid "Read More"
 msgstr ""
 
@@ -483,11 +483,19 @@ msgstr ""
 msgid "Search..."
 msgstr ""
 
-#: templates/page-showcase.php:101 templates/post-showcase.php:104
+#: templates/page-showcase.php:104
+msgid "There are no pages available to display."
+msgstr ""
+
+#: templates/page-showcase.php:106
+msgid "These pages can be set in the <a href=\"%s\">customizer</a>."
+msgstr ""
+
+#: templates/post-showcase.php:106
 msgid "Sorry, there are no posts available to display."
 msgstr ""
 
-#: templates/page-showcase.php:102 templates/post-showcase.php:105
+#: templates/post-showcase.php:107
 msgid ""
 "Make featured images are set and there are enough posts published for the "
 "selected tag."

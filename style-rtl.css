@@ -1126,6 +1126,10 @@ a:active {
   padding: 25%;
 }
 
+.template-showcase .featured-1 {
+  border-bottom: none;
+}
+
 .template-showcase .featured-1 .fallback-thumbnail {
   padding: 15%;
 }
@@ -1360,8 +1364,12 @@ a:active {
 }
 
 .comments-title {
+  margin: 0 0 15px;
   padding: 30px 30px 0;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
   color: #666;
+  font-weight: 400;
 }
 
 .no-comments {
@@ -1383,12 +1391,6 @@ a:active {
 
 .comment-list .children {
   list-style: none;
-}
-
-.comments-title {
-  color: #666;
-  font-weight: 400;
-  margin: 0 0 15px;
 }
 
 .comment, .trackback, .pingback {
@@ -1489,14 +1491,24 @@ a:active {
 }
 
 #reply-title {
-  color: #604c40;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: white;
   background: #1c0f08;
   margin: 0;
   padding: 10px 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#reply-title:hover {
+  color: #604c40;
 }
 
 #commentform {
   padding: 20px 30px 10px;
+  display: none;
 }
 
 #respond p {
