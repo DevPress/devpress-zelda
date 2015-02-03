@@ -248,9 +248,18 @@ function zelda_options() {
 	// Get pages
 	$pages = array();
 	$pages['zelda-none-selected'] = __( 'Select Page', 'zelda' );
-	$obj = get_pages( 'sort_column=post_parent,menu_order' );
-	foreach ( $obj as $page) {
-		$pages[$page->ID] = $page->post_title;
+	$obj = get_pages( array(
+		'sort_column' => 'post_title',
+		'depth' => -1,
+		'sort_order' => 'ASC'
+	) );
+
+	foreach ( $obj as $page ) {
+		if ( $page->post_parent ) {
+			$pages[$page->ID] = '— ' . $page->post_title;
+		} else {
+			$pages[$page->ID] = $page->post_title;
+		}
 	}
 
 	$options['showcase-page-1'] = array(
@@ -353,10 +362,52 @@ add_action( 'customize_register', 'zelda_customizer_defaults', 100 );
  * @return array
  */
 function zelda_get_standard_fonts( $fonts ) {
-	$fonts['verdana'] = array(
+	$fonts['Verdana'] = array(
 		'label' => 'Verdana',
 		'stack' => 'Verdana, sans-serif'
 	);
 	return $fonts;
 }
 add_filter( 'customizer_library_get_standard_fonts', 'zelda_get_standard_fonts', 100 );
+
+/**
+ * Narrowing down the choice of Google fonts to a few editorial selections
+ *
+ * @since  1.0.0.
+ *
+ * @param  array
+ * @return array
+ */
+function zelda_get_google_fonts( $fonts ) {
+
+	$selections = array(
+		'Abel',
+		'Amatic SC',
+		'Cabin',
+		'Codystar',
+		'Corben',
+		'Courgette',
+		'Dancing Script',
+		'Goudy Bookletter 1911',
+		'Josefin Sans',
+		'Moulpali',
+		'Nixie One',
+		'Pontano Sans',
+		'Quicksand',
+		'Raleway',
+		'Rokkitt',
+		'Sanchez',
+		'Tenor Sans',
+		'Unna'
+	);
+
+	$return = array();
+
+	foreach( $selections as $key ) :
+		$select_fonts[$key] = $fonts[$key];
+	endforeach;
+
+	return $select_fonts;
+
+}
+add_filter( 'customizer_library_get_google_fonts', 'zelda_get_google_fonts', 100 );
