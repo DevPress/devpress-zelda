@@ -83,7 +83,7 @@ function zelda_setup() {
 	add_theme_support(
 		'theme-layouts',
 		array(
-			'single-column' => __( '1 Column Wide', 'zelda' ),
+			'single-column' => __( 'Single Column', 'zelda' ),
 			'sidebar-right' => __( '2 Columns: Content / Sidebar', 'zelda' ),
 			'sidebar-left' => __( '2 Columns: Sidebar / Content', 'zelda' )
 		),

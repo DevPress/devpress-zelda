@@ -55,6 +55,11 @@ get_header(); ?>
 					$image = get_template_directory_uri() . '/images/post.svg';
 					$class = 'fallback-thumbnail';
 				}
+
+				if ( post_password_required() ) {
+					$image = get_template_directory_uri() . '/images/lock.svg';
+					$class = 'fallback-thumbnail';
+				}
 				?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class( 'featured-' . $count ); ?>>
