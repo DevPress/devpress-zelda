@@ -208,105 +208,121 @@ msgstr ""
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer-options.php:98
-msgid "Primary Link Color"
+#: inc/customizer-options.php:97
+msgid "Default"
 msgstr ""
 
-#: inc/customizer-options.php:106
-msgid "Secondary Background Color"
+#: inc/customizer-options.php:98
+msgid "Cool"
+msgstr ""
+
+#: inc/customizer-options.php:99
+msgid "Neutral"
+msgstr ""
+
+#: inc/customizer-options.php:104
+msgid "Color Scheme"
 msgstr ""
 
 #: inc/customizer-options.php:114
+msgid "Primary Link Color"
+msgstr ""
+
+#: inc/customizer-options.php:123
+msgid "Secondary Background Color"
+msgstr ""
+
+#: inc/customizer-options.php:132
 msgid "Secondary Text Color"
 msgstr ""
 
-#: inc/customizer-options.php:122
+#: inc/customizer-options.php:141
 msgid "Secondary Link Color"
 msgstr ""
 
-#: inc/customizer-options.php:133
+#: inc/customizer-options.php:153
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer-options.php:139
+#: inc/customizer-options.php:159
 msgid "Primary Font"
 msgstr ""
 
-#: inc/customizer-options.php:148
+#: inc/customizer-options.php:168
 msgid "Secondary Font"
 msgstr ""
 
-#: inc/customizer-options.php:157
+#: inc/customizer-options.php:177
 msgid "Tertiary Font"
 msgstr ""
 
-#: inc/customizer-options.php:167
+#: inc/customizer-options.php:187
 msgid "Google Font Subset"
 msgstr ""
 
-#: inc/customizer-options.php:168
+#: inc/customizer-options.php:188
 msgid "Not all fonts provide each of these subsets."
 msgstr ""
 
-#: inc/customizer-options.php:180
+#: inc/customizer-options.php:200
 msgid "Archive"
 msgstr ""
 
-#: inc/customizer-options.php:186
+#: inc/customizer-options.php:206
 msgid "Display Excerpts"
 msgstr ""
 
-#: inc/customizer-options.php:187
+#: inc/customizer-options.php:207
 msgid "Display excerpts instead of full content."
 msgstr ""
 
-#: inc/customizer-options.php:195 inc/customizer-options.php:277
+#: inc/customizer-options.php:215 inc/customizer-options.php:306
 msgid "Display Featured Images"
 msgstr ""
 
-#: inc/customizer-options.php:206
+#: inc/customizer-options.php:226
 msgid "Showcase"
 msgstr ""
 
-#: inc/customizer-options.php:212
+#: inc/customizer-options.php:232
 msgid "All Posts"
 msgstr ""
 
-#: inc/customizer-options.php:220
+#: inc/customizer-options.php:240
 msgid "Showcase Tag"
 msgstr ""
 
-#: inc/customizer-options.php:221
+#: inc/customizer-options.php:241
 msgid ""
 "This is for the \"Post Showcase\" template. Select \"All Posts\" to show "
 "the most recent five."
 msgstr ""
 
-#: inc/customizer-options.php:230
+#: inc/customizer-options.php:250
 msgid "Select Page"
 msgstr ""
 
-#: inc/customizer-options.php:238
+#: inc/customizer-options.php:267
 msgid "Showcase Pages"
 msgstr ""
 
-#: inc/customizer-options.php:239
+#: inc/customizer-options.php:268
 msgid "This is for the \"Page Showcase\" template. Select up to five."
 msgstr ""
 
-#: inc/customizer-options.php:263
+#: inc/customizer-options.php:292
 msgid "Post"
 msgstr ""
 
-#: inc/customizer-options.php:269
+#: inc/customizer-options.php:298
 msgid "Display Post Dates"
 msgstr ""
 
-#: inc/customizer-options.php:288
+#: inc/customizer-options.php:317
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer-options.php:294
+#: inc/customizer-options.php:323
 msgid "Footer Text"
 msgstr ""
 
@@ -510,7 +526,10 @@ msgid "https://devpress.com/zelda"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "A responsive theme designed for business and magazine."
+msgid ""
+"A responsive theme designed for business or magazine layouts. Select pages "
+"or posts to display on the showcase templates. Fonts and colors are "
+"customizable."
 msgstr ""
 
 #. Author of the plugin/theme

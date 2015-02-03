@@ -1,6 +1,6 @@
 # Zelda
 
-Zelda description.
+A responsive theme designed for business or magazine layouts. Select pages or posts to display on the showcase templates. Fonts and colors are customizable.
 
 ## Installation Instructions
 

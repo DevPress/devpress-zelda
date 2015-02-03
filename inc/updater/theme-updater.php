@@ -18,7 +18,7 @@ $updater = new EDD_Theme_Updater_Admin(
 		'remote_api_url' => 'https://devpress.com',
 		'item_name' => 'Zelda',
 		'theme_slug' => 'zelda',
-		'version' => '0.1.0',
+		'version' => ZELDA_VERSION,
 		'author' => 'DevPress'
 	)
 

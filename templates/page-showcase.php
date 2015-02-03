@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area clearfix">
 
 		<?php
 
@@ -44,7 +44,7 @@ get_header(); ?>
 				if ( 1 == $count ) {
 					$thumbnail = 'zelda-showcase-large';
 					$width = 780;
-					$height = 520;
+					$height = 580;
 				}
 
 				// If no image is set, we'll use a fallback image
