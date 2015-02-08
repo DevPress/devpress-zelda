@@ -60,6 +60,7 @@ function customizer_library_register( $wp_customize ) {
 				case 'select':
 				case 'radio':
 				case 'checkbox':
+				case 'dropdown-pages':
 
 					$wp_customize->add_control(
 						$option['id'], $option
@@ -221,6 +222,10 @@ function customizer_library_get_sanitization( $type )  {
 
 	if ( 'textarea' == $type ) {
 		return 'customizer_library_sanitize_text';
+	}
+
+	if ( 'dropdown-pages' == $type ) {
+		return 'absint';
 	}
 
 	// If a custom option is being used, return false

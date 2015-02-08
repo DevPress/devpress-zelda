@@ -254,21 +254,12 @@ function zelda_options() {
 		'sort_order' => 'ASC'
 	) );
 
-	foreach ( $obj as $page ) {
-		if ( $page->post_parent ) {
-			$pages[$page->ID] = '— ' . $page->post_title;
-		} else {
-			$pages[$page->ID] = $page->post_title;
-		}
-	}
-
 	$options['showcase-page-1'] = array(
 		'id' => 'showcase-page-1',
 		'label'   => __( 'Showcase Pages', 'zelda' ),
 		'description'   => __( 'This is for the "Page Showcase" template. Select up to five.', 'zelda' ),
 		'section' => $section,
-		'type'    => 'select',
-		'choices' => $pages,
+		'type'    => 'dropdown-pages',
 		'default' => ''
 	);
 
@@ -277,8 +268,7 @@ function zelda_options() {
 		$options['showcase-page-' . $count] = array(
 			'id' => 'showcase-page-' . $count,
 			'section' => $section,
-			'type'    => 'select',
-			'choices' => $pages,
+			'type'    => 'dropdown-pages',
 			'default' => ''
 		);
 
