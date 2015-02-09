@@ -45,7 +45,7 @@ function zelda_styles() {
 	endif;
 
 	// Primary Link Color
-	$setting = 'primary-link-color';
+	$setting = 'primary-accent-color';
 	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
 
 	if ( $mod !== customizer_library_get_default( $setting ) ) :

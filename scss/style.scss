@@ -56,7 +56,7 @@ h4, h5, h6 {
 	font-size: 22px;
 }
 a {
-	color: $primary-link-color;
+	color: $primary-accent-color;
 	text-decoration: none;
 	transition: all 0.2s ease;
 	word-wrap: break-word;
@@ -368,7 +368,7 @@ a:active {
 	position: absolute;
 	top: 28px;
 	left: 30px;
-	color: $primary-link-color;
+	color: $primary-accent-color;
 }
 #content blockquote cite {
   display: inline-block;
@@ -399,7 +399,7 @@ a:active {
 	padding: 0;
 }
 .template-showcase .fallback-thumbnail {
-	background: $primary-link-color;
+	background: $primary-accent-color;
 	padding: 25%;
 }
 .template-showcase .featured-1 {

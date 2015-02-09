@@ -148,7 +148,7 @@ input[type="submit"] {
 	border-radius:3px;
 	display: inline-block;
 	padding: 6px 20px 8px;
-	background-color: $primary-link-color;
+	background-color: $primary-accent-color;
 	box-shadow: inset 0 -2px rgba(0,0,0,.2);
 	color: #fff;
 }
@@ -157,7 +157,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background: darken( $primary-link-color, 5% );
+	background: darken( $primary-accent-color, 5% );
 }
 button:focus,
 input[type="button"]:focus,

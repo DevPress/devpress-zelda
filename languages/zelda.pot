@@ -97,7 +97,7 @@ msgid "Footer Menu"
 msgstr ""
 
 #: functions.php:86
-msgid "1 Column Wide"
+msgid "Single Column"
 msgstr ""
 
 #: functions.php:87
@@ -208,121 +208,105 @@ msgstr ""
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer-options.php:97
-msgid "Default"
-msgstr ""
-
 #: inc/customizer-options.php:98
-msgid "Cool"
+msgid "Primary Accent Color"
 msgstr ""
 
-#: inc/customizer-options.php:99
-msgid "Neutral"
+#: inc/customizer-options.php:107
+msgid "Outer Background Color"
 msgstr ""
 
-#: inc/customizer-options.php:104
-msgid "Color Scheme"
+#: inc/customizer-options.php:116
+msgid "Outer Text Color"
 msgstr ""
 
-#: inc/customizer-options.php:114
-msgid "Primary Link Color"
+#: inc/customizer-options.php:125
+msgid "Outer Link Color"
 msgstr ""
 
-#: inc/customizer-options.php:123
-msgid "Secondary Background Color"
-msgstr ""
-
-#: inc/customizer-options.php:132
-msgid "Secondary Text Color"
-msgstr ""
-
-#: inc/customizer-options.php:141
-msgid "Secondary Link Color"
-msgstr ""
-
-#: inc/customizer-options.php:153
+#: inc/customizer-options.php:137
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer-options.php:159
+#: inc/customizer-options.php:143
 msgid "Primary Font"
 msgstr ""
 
-#: inc/customizer-options.php:168
+#: inc/customizer-options.php:152
 msgid "Secondary Font"
 msgstr ""
 
-#: inc/customizer-options.php:177
+#: inc/customizer-options.php:161
 msgid "Tertiary Font"
 msgstr ""
 
-#: inc/customizer-options.php:187
+#: inc/customizer-options.php:171
 msgid "Google Font Subset"
 msgstr ""
 
-#: inc/customizer-options.php:188
+#: inc/customizer-options.php:172
 msgid "Not all fonts provide each of these subsets."
 msgstr ""
 
-#: inc/customizer-options.php:200
+#: inc/customizer-options.php:184
 msgid "Archive"
 msgstr ""
 
-#: inc/customizer-options.php:206
+#: inc/customizer-options.php:190
 msgid "Display Excerpts"
 msgstr ""
 
-#: inc/customizer-options.php:207
+#: inc/customizer-options.php:191
 msgid "Display excerpts instead of full content."
 msgstr ""
 
-#: inc/customizer-options.php:215 inc/customizer-options.php:306
+#: inc/customizer-options.php:199 inc/customizer-options.php:280
 msgid "Display Featured Images"
 msgstr ""
 
-#: inc/customizer-options.php:226
+#: inc/customizer-options.php:210
 msgid "Showcase"
 msgstr ""
 
-#: inc/customizer-options.php:232
+#: inc/customizer-options.php:216
 msgid "All Posts"
 msgstr ""
 
-#: inc/customizer-options.php:240
+#: inc/customizer-options.php:224
 msgid "Showcase Tag"
 msgstr ""
 
-#: inc/customizer-options.php:241
+#: inc/customizer-options.php:225
 msgid ""
 "This is for the \"Post Showcase\" template. Select \"All Posts\" to show "
 "the most recent five."
 msgstr ""
 
-#: inc/customizer-options.php:250
+#: inc/customizer-options.php:234
 msgid "Select Page"
 msgstr ""
 
-#: inc/customizer-options.php:267
+#: inc/customizer-options.php:243
 msgid "Showcase Pages"
 msgstr ""
 
-#: inc/customizer-options.php:268
+#: inc/customizer-options.php:244
 msgid "This is for the \"Page Showcase\" template. Select up to five."
 msgstr ""
 
-#: inc/customizer-options.php:292
+#: inc/customizer-options.php:266
 msgid "Post"
 msgstr ""
 
-#: inc/customizer-options.php:298
+#: inc/customizer-options.php:272
 msgid "Display Post Dates"
 msgstr ""
 
-#: inc/customizer-options.php:317
+#: inc/customizer-options.php:291
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer-options.php:323
+#: inc/customizer-options.php:297
 msgid "Footer Text"
 msgstr ""
 
@@ -366,8 +350,8 @@ msgstr ""
 msgid "%1$s by %2$s."
 msgstr ""
 
-#: inc/mods.php:123 inc/mods.php:134 templates/page-showcase.php:91
-#: templates/post-showcase.php:93
+#: inc/mods.php:123 inc/mods.php:134 templates/page-showcase.php:96
+#: templates/post-showcase.php:98
 msgid "Read More"
 msgstr ""
 
@@ -499,19 +483,19 @@ msgstr ""
 msgid "Search..."
 msgstr ""
 
-#: templates/page-showcase.php:104
+#: templates/page-showcase.php:109
 msgid "There are no pages available to display."
 msgstr ""
 
-#: templates/page-showcase.php:106
+#: templates/page-showcase.php:111
 msgid "These pages can be set in the <a href=\"%s\">customizer</a>."
 msgstr ""
 
-#: templates/post-showcase.php:106
+#: templates/post-showcase.php:111
 msgid "Sorry, there are no posts available to display."
 msgstr ""
 
-#: templates/post-showcase.php:107
+#: templates/post-showcase.php:112
 msgid ""
 "Make featured images are set and there are enough posts published for the "
 "selected tag."
