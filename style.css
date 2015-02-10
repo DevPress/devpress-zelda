@@ -524,6 +524,7 @@ a:active {
     clear: both;
     width: auto;
     float: none;
+    padding: 30px 0 0;
   }
 }
 /* Header
@@ -1238,6 +1239,10 @@ a:active {
 
 /* Search & 404
 --------------------------------------------------------------*/
+.search-form {
+  height: 32px;
+}
+
 .search-form label {
   width: 100%;
   padding-right: 59px;
