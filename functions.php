@@ -8,7 +8,7 @@
 /**
  * The current version of the theme.
  */
-define( 'ZELDA_VERSION', '1.0.0' );
+define( 'ZELDA_VERSION', '1.0.1' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.

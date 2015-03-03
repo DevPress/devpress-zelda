@@ -43,7 +43,8 @@ get_header(); ?>
 
 				// If no image is set, we'll use a fallback image
 				if ( has_post_thumbnail() ) {
-					$image = wp_get_attachment_image_src( get_post_thumbnail_id(), $thumbnail, true )[0];
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id(), $thumbnail, true );
+					$image = $image[0];
 					$class = "image-thumbnail";
 				} else {
 					$format = get_post_format();

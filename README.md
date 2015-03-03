@@ -19,6 +19,11 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 
 ## Change Log
 
+1.0.1
+===
+
+* Bugfix: Make showcase templates compatible with PHP5.3
+
 1.0.0
 ===
 

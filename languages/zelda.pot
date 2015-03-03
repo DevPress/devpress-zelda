@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zelda 1.0.0\n"
+"Project-Id-Version: Zelda 1.0.1\n"
 "Report-Msgid-Bugs-To: https://devpress.com/\n"
 "POT-Creation-Date: 2014-10-27 21:38:49+00:00\n"
 "MIME-Version: 1.0\n"
@@ -350,8 +350,8 @@ msgstr ""
 msgid "%1$s by %2$s."
 msgstr ""
 
-#: inc/mods.php:123 inc/mods.php:134 templates/page-showcase.php:96
-#: templates/post-showcase.php:98
+#: inc/mods.php:123 inc/mods.php:134 templates/page-showcase.php:97
+#: templates/post-showcase.php:99
 msgid "Read More"
 msgstr ""
 
@@ -483,19 +483,19 @@ msgstr ""
 msgid "Search..."
 msgstr ""
 
-#: templates/page-showcase.php:109
+#: templates/page-showcase.php:110
 msgid "There are no pages available to display."
 msgstr ""
 
-#: templates/page-showcase.php:111
+#: templates/page-showcase.php:112
 msgid "These pages can be set in the <a href=\"%s\">customizer</a>."
 msgstr ""
 
-#: templates/post-showcase.php:111
+#: templates/post-showcase.php:112
 msgid "Sorry, there are no posts available to display."
 msgstr ""
 
-#: templates/post-showcase.php:112
+#: templates/post-showcase.php:113
 msgid ""
 "Make featured images are set and there are enough posts published for the "
 "selected tag."
