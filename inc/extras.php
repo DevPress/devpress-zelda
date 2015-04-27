@@ -167,3 +167,30 @@ function zelda_count_widgets( $sidebar_id ) {
 	endif;
 
 }
+
+/**
+ * Helper function to determine if featured image should be displayed
+ *
+ * @return boolean
+ */
+function zelda_display_featured_image() {
+
+
+	if ( ! has_post_thumbnail() ) {
+		return false;
+	}
+
+
+
+	if ( false == get_theme_mod( 'post-featured-images', 1 ) ) {
+		return false;
+	}
+
+	if ( is_single() ) {
+		if ( get_post_meta( get_the_ID(), 'hide_featured_image', 1 ) ) {
+			return false;
+		}
+	}
+
+	return true;
+}

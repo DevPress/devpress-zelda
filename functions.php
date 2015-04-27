@@ -243,6 +243,9 @@ require get_template_directory() . '/inc/styles.php';
 // Additional filters and actions based on theme customizer selections.
 require get_template_directory() . '/inc/mods.php';
 
+// Adds post meta
+require get_template_directory() . '/inc/meta.php';
+
 // Theme Updater
 function zelda_theme_updater() {
 	require( get_template_directory() . '/inc/updater/theme-updater.php' );
