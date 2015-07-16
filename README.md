@@ -20,12 +20,12 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 ## Change Log
 
 1.1.1 (07/15/2015)
-===
+---
 
 * Fix: Missing JetPack Color library
 
 1.1.0 (07/15/2015)
-===
+---
 
 * Fix: Hover state of site logo in Firefox
 * Update: Move image size setup into its own function
@@ -34,11 +34,11 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 * Enhancement: Option to display featured image in post meta
 
 1.0.1 (03/03/2015)
-===
+---
 
 * Bugfix: Make showcase templates compatible with PHP5.3
 
 1.0.0 (02/10/2015)
-===
+---
 
 * Initial release
