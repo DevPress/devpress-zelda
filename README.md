@@ -19,6 +19,11 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 
 ## Change Log
 
+1.1.2 (07/16/2015)
+---
+
+* Fix: Page corner background color in IE
+
 1.1.1 (07/15/2015)
 ---
 
