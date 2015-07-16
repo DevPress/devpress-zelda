@@ -22,7 +22,10 @@ get_header(); ?>
 					endif;
 				?>
 
-				<?php zelda_post_nav(); ?>
+				<?php the_post_navigation( array(
+					'prev_text' => _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'zelda' ),
+					'next_text' => _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link', 'zelda' )
+				) ); ?>
 
 			<?php endwhile; // end of the loop. ?>
 		</div>

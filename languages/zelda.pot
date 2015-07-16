@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zelda 1.0.1\n"
+"Project-Id-Version: Zelda 1.1.0\n"
 "Report-Msgid-Bugs-To: https://devpress.com/\n"
 "POT-Creation-Date: 2014-10-27 21:38:49+00:00\n"
 "MIME-Version: 1.0\n"
@@ -36,7 +36,7 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: comment.php:52 content-page.php:24 inc/template-tags.php:134
+#: comment.php:52 content-page.php:24 inc/template-tags.php:80
 msgid "Edit"
 msgstr ""
 
@@ -88,35 +88,35 @@ msgstr ""
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: functions.php:56
+#: functions.php:54
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:57
+#: functions.php:55
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:86
+#: functions.php:84
 msgid "Single Column"
 msgstr ""
 
-#: functions.php:87
+#: functions.php:85
 msgid "2 Columns: Content / Sidebar"
 msgstr ""
 
-#: functions.php:88
+#: functions.php:86
 msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:119
 msgid "Sidebar"
 msgstr ""
 
-#: header.php:23
+#: header.php:22
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:66
+#: header.php:65
 msgid "Menu"
 msgstr ""
 
@@ -310,32 +310,32 @@ msgstr ""
 msgid "Footer Text"
 msgstr ""
 
-#: inc/extras.php:35
-msgid "Page %s"
-msgstr ""
-
-#: inc/extras.php:88
+#: inc/extras.php:56
 msgid "Name"
 msgstr ""
 
-#: inc/extras.php:89
+#: inc/extras.php:57
 msgid "Name *"
 msgstr ""
 
-#: inc/extras.php:95
+#: inc/extras.php:63
 msgid "Email"
 msgstr ""
 
-#: inc/extras.php:96
+#: inc/extras.php:64
 msgid "Email *"
 msgstr ""
 
-#: inc/extras.php:102 inc/extras.php:103
+#: inc/extras.php:70 inc/extras.php:71
 msgid "Website"
 msgstr ""
 
-#: inc/extras.php:121
+#: inc/extras.php:89
 msgid "Comment *"
+msgstr ""
+
+#: inc/meta.php:23
+msgid "Hide featured image in post."
 msgstr ""
 
 #: inc/mods.php:15
@@ -355,23 +355,7 @@ msgstr ""
 msgid "Read More"
 msgstr ""
 
-#: inc/template-tags.php:21
-msgid "Posts navigation"
-msgstr ""
-
-#: inc/template-tags.php:25
-msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr ""
-
-#: inc/template-tags.php:29
-msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: inc/template-tags.php:52
-msgid "Post navigation"
-msgstr ""
-
-#: inc/template-tags.php:112 inc/template-tags.php:125
+#: inc/template-tags.php:58 inc/template-tags.php:71
 #. translators: used between list items, there is a space after the comma
 msgid ", "
 msgstr ""
@@ -559,22 +543,12 @@ msgctxt "font style"
 msgid "Monospaced"
 msgstr ""
 
-#: inc/template-tags.php:55
-msgctxt "Previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span> %title"
-msgstr ""
-
-#: inc/template-tags.php:56
-msgctxt "Next post link"
-msgid "%title <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: inc/template-tags.php:80
+#: inc/template-tags.php:26
 msgctxt "post date"
 msgid "%s"
 msgstr ""
 
-#: inc/template-tags.php:85
+#: inc/template-tags.php:31
 msgctxt "post author"
 msgid "By %s"
 msgstr ""
@@ -583,4 +557,14 @@ msgstr ""
 #. Translators: Default theme layout option.
 msgctxt "theme layout"
 msgid "Default"
+msgstr ""
+
+#: single.php:26
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr ""
+
+#: single.php:27
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""

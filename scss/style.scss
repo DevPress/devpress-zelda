@@ -4,7 +4,7 @@ Theme URI: https://devpress.com/zelda
 Author: DevPress
 Author URI: https://devpress.com
 Description: A responsive theme designed for business or magazine layouts. Select pages or posts to display on the showcase templates. Fonts and colors are customizable.
-Version: 1.0.1
+Version: 1.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: zelda
@@ -188,6 +188,9 @@ a:active {
 	margin: 0;
 	line-height: 1;
 }
+.site-logo a {
+	text-decoration: none;
+}
 .brand-logo,
 .brand-title {
 	margin: 0;
@@ -216,6 +219,7 @@ a:active {
 --------------------------------------------------------------*/
 
 .sticky {
+	/* Theme Review Requirement */
 }
 .hentry {
 	border-bottom: 3px double #eee;
@@ -312,7 +316,9 @@ a:active {
 
 /* Post Meta */
 
-.category-meta:before, .tag-meta:before, .edit-meta:before {
+.category-meta:before,
+.tag-meta:before,
+.edit-meta:before {
 	font-family: 'zelda-icons';
 	speak: none;
 	font-style: normal;
@@ -579,9 +585,8 @@ a:active {
 --------------------------------------------------------------*/
 
 .site-main .comment-navigation,
-.site-main .paging-navigation,
 .site-main .post-navigation {
-	clear:both;
+	clear: both;
 	overflow: hidden;
 	font-size: 14px
 }
@@ -592,25 +597,35 @@ a:active {
 	padding: 30px 30px 0;
 }
 .comment-navigation .nav-previous,
-.paging-navigation .nav-previous,
 .post-navigation .nav-previous {
 	float: left;
 	width: 50%;
 }
 .comment-navigation .nav-next,
-.paging-navigation .nav-next,
 .post-navigation .nav-next {
 	float: right;
 	text-align: right;
 	width: 50%;
 }
-.paging-navigation a {
-	padding: 15px 30px;
-	display: inline-block;
-}
 .post-navigation {
-	padding:30px;
+	padding: 30px;
 	border-top: 1px solid #f0f0f0;
+}
+.pagination {
+	padding: 30px;
+}
+.pagination .page-numbers {
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 0 2px 0 0;
+	border: 1px solid #eee;
+	line-height: 1;
+	text-decoration: none;
+	border-radius: 2px;
+}
+.pagination .page-numbers.current,
+.pagination a.page-numbers:hover {
+	background: #fafafa;
 }
 
 /* Comments
@@ -636,6 +651,7 @@ a:active {
 	word-wrap: break-word;
 }
 .bypostauthor {
+	/* Theme Review Requirement */
 }
 .comment-list {
 	margin:0;
@@ -723,7 +739,6 @@ a:active {
 .comment-list #respond {
 	padding:30px 0;
 }
-
 #respond {
 	margin: 30px;
 	background: $secondary-shade-2;
@@ -962,14 +977,12 @@ object {
 
 .clearfix:before,
 .clearfix:after {
-  content: " ";
-  display: table;
+	content: " ";
+	display: table;
 }
-
 .clearfix:after {
-  clear: both;
+	clear: both;
 }
-
 .clearfix {
   *zoom: 1;
 }
@@ -1008,6 +1021,7 @@ object {
 .infinity-end.neverending .site-footer {
 	display: block;
 }
+/* Social Sharing */
 .entry-content .sharedaddy {
 	padding-top:30px;
 }

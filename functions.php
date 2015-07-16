@@ -8,7 +8,7 @@
 /**
  * The current version of the theme.
  */
-define( 'ZELDA_VERSION', '1.0.1' );
+define( 'ZELDA_VERSION', '1.1.0' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -38,18 +38,16 @@ function zelda_setup() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
+	/*
+	 * Let WordPress manage the document title.
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
+	 */
+	add_theme_support( 'title-tag' );
+
 	// Add excerpt field to pages
 	add_post_type_support( 'page', 'excerpt' );
-
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-	 */
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 780, 1200 );
-	add_image_size( 'zelda-showcase', 480, 480, true );
-	add_image_size( 'zelda-showcase-large', 780, 580, true );
 
 	// Registers menu above the site title
 	register_nav_menus( array(
@@ -93,6 +91,22 @@ function zelda_setup() {
 }
 endif; // zelda_setup
 add_action( 'after_setup_theme', 'zelda_setup' );
+
+if ( ! function_exists( 'zelda_register_image_sizes' ) ) :
+/*
+ * Enables support for Post Thumbnails on posts and pages.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+ */
+function zelda_register_image_sizes() {
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 780, 1200 );
+	add_image_size( 'zelda-showcase', 480, 480, true );
+	add_image_size( 'zelda-showcase-large', 780, 580, true );
+}
+add_action( 'after_setup_theme', 'zelda_register_image_sizes' );
+endif;
+
 
 /**
  * Register widget area.
@@ -222,11 +236,6 @@ require get_template_directory() . '/inc/template-tags.php';
 
 // Custom functions that act independently of the theme templates.
 require get_template_directory() . '/inc/extras.php';
-
-// Color utility functions.
-if ( ! class_exists( 'Jetpack_Color' ) ) {
-	require get_template_directory() . '/inc/jetpack.class.color.php';
-}
 
 // Theme Layouts
 require get_template_directory() . '/inc/theme-layouts.php';
