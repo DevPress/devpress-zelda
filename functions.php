@@ -8,7 +8,7 @@
 /**
  * The current version of the theme.
  */
-define( 'ZELDA_VERSION', '1.1.0' );
+define( 'ZELDA_VERSION', '1.1.1' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -239,6 +239,11 @@ require get_template_directory() . '/inc/extras.php';
 
 // Theme Layouts
 require get_template_directory() . '/inc/theme-layouts.php';
+
+// Color utility functions.
+if ( ! class_exists( 'Jetpack_Color' ) ) {
+	require get_template_directory() . '/inc/jetpack.class.color.php';
+}
 
 // Helper library for the theme customizer.
 require get_template_directory() . '/inc/customizer-library/customizer-library.php';
