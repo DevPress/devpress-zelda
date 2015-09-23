@@ -287,7 +287,7 @@ input[type="submit"] {
   border-radius: 3px;
   display: inline-block;
   padding: 6px 20px 8px;
-  background-color: #d55c17;
+  background-color: #D55C17;
   box-shadow: inset 0 -2px rgba(0, 0, 0, 0.2);
   color: #fff;
 }
@@ -416,7 +416,7 @@ h4, h5, h6 {
 }
 
 a {
-  color: #d55c17;
+  color: #D55C17;
   text-decoration: none;
   transition: all 0.2s ease;
   word-wrap: break-word;
@@ -431,7 +431,7 @@ a:active {
 /* Layout
 -------------------------------------------------------------- */
 #page {
-  background: #1c0f08;
+  background: #1C0F08;
   width: 96%;
   max-width: 1080px;
   margin: 0 auto;
@@ -454,7 +454,7 @@ a:active {
 .site-main:before {
   content: "";
   display: block;
-  border-color: #f8f8f8 #1c0f08;
+  border-color: #F8F8F8 #1C0F08;
   border-style: solid;
   border-width: 0 0 24px 24px;
   position: absolute;
@@ -547,7 +547,7 @@ a:active {
 
 .site-title a {
   position: relative;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -570,7 +570,7 @@ a:active {
 }
 
 .site-description {
-  color: #604c40;
+  color: #604C40;
   font-size: 18px;
   line-height: 1;
   margin: 0;
@@ -615,8 +615,8 @@ a:active {
   padding: 12px 10px;
   display: block;
   text-decoration: none;
-  color: white;
-  border-top: 1px solid #604c40;
+  color: #ffffff;
+  border-top: 1px solid #604C40;
 }
 
 .primary-navigation .menu-item-has-children > a {
@@ -671,7 +671,7 @@ a:active {
   cursor: pointer;
   float: left;
   padding: 12px 0 12px 10px;
-  color: white;
+  color: #ffffff;
   font-weight: 600;
   text-transform: uppercase;
   margin-left: -12px;
@@ -747,12 +747,12 @@ a:active {
   .primary-navigation a {
     display: inline-block;
     border: none;
-    border-right: 1px solid #604c40;
+    border-right: 1px solid #604C40;
     padding: 2px 12px;
   }
 
   .primary-navigation a:hover {
-    color: #604c40;
+    color: #604C40;
   }
 
   .primary-navigation .menu-item-has-children > a {
@@ -768,7 +768,7 @@ a:active {
     margin-right: -110px;
     top: 34px;
     z-index: 99999;
-    border: 1px solid #1c0f08;
+    border: 1px solid #1C0F08;
     border-radius: 3px;
     font-size: 16px;
     text-align: center;
@@ -777,7 +777,7 @@ a:active {
   }
 
   .primary-navigation ul ul a:hover {
-    color: white;
+    color: #ffffff;
   }
 
   .primary-navigation ul ul:before {
@@ -803,7 +803,7 @@ a:active {
 
   .primary-navigation ul ul a {
     border: none;
-    border-bottom: 1px solid #1c0f08;
+    border-bottom: 1px solid #1C0F08;
   }
 
   .primary-navigation ul ul a,
@@ -813,7 +813,7 @@ a:active {
   }
 
   .primary-navigation ul ul a:hover {
-    background: #1c0f08;
+    background: #1C0F08;
   }
 
   .primary-navigation ul ul li:last-child a {
@@ -1079,7 +1079,7 @@ a:active {
 /* Post Formats
 --------------------------------------------------------------*/
 #content blockquote {
-  border-right: 4px solid #1c0f08;
+  border-right: 4px solid #1C0F08;
   margin: 0 0 15px;
   padding: 30px 90px 30px 30px;
   position: relative;
@@ -1097,7 +1097,7 @@ a:active {
   position: absolute;
   top: 28px;
   right: 30px;
-  color: #d55c17;
+  color: #D55C17;
 }
 
 #content blockquote cite {
@@ -1133,7 +1133,7 @@ a:active {
 }
 
 .template-showcase .fallback-thumbnail {
-  background: #d55c17;
+  background: #D55C17;
   padding: 25%;
 }
 
@@ -1195,7 +1195,7 @@ a:active {
 
 @media screen and (min-width: 881px) {
   .template-showcase .hentry {
-    width: calc(25% - 37.5px );
+    width: calc( 25% - 37.5px );
     float: right;
     margin: 0 30px 30px 0;
     min-height: 365px;
@@ -1223,14 +1223,14 @@ a:active {
 }
 @media screen and (min-width: 481px) and (max-width: 880px) {
   .template-showcase .hentry {
-    width: calc(50% - 45px );
+    width: calc( 50% - 45px );
     float: right;
     margin: 0 30px 30px 0;
     min-height: 365px;
   }
 
   .template-showcase .featured-1 {
-    width: calc(100% - 60px );
+    width: calc( 100% - 60px );
     float: none;
     margin: 30px;
   }
@@ -1280,7 +1280,7 @@ a:active {
 .secondary .widget {
   padding: 15px 30px;
   margin-bottom: 15px;
-  color: #604c40;
+  color: #604C40;
   font-size: 13px;
 }
 
@@ -1293,13 +1293,13 @@ a:active {
   font-weight: 800;
   font-size: 17px;
   text-transform: uppercase;
-  border-bottom: 3px double #604c40;
+  border-bottom: 3px double #604C40;
   padding-bottom: 5px;
   margin-bottom: 15px;
 }
 
 .widget a {
-  color: white;
+  color: #ffffff;
 }
 
 /* Make sure select elements fit in widgets */
@@ -1309,7 +1309,7 @@ a:active {
 
 /* Widget Search */
 .widget_search .search-form {
-  background: #604c40;
+  background: #604C40;
   box-shadow: inset 0 -2px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
 }
@@ -1317,7 +1317,7 @@ a:active {
 .widget_search input[type="search"] {
   background: transparent;
   box-shadow: none;
-  color: white;
+  color: #ffffff;
 }
 
 #calendar_wrap {
@@ -1516,16 +1516,16 @@ a:active {
 
 #respond {
   margin: 30px;
-  background: #604c40;
-  color: white;
+  background: #604C40;
+  color: #ffffff;
 }
 
 #reply-title {
   font-size: 20px;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  color: white;
-  background: #1c0f08;
+  color: #ffffff;
+  background: #1C0F08;
   margin: 0;
   padding: 10px 30px;
   cursor: pointer;
@@ -1533,7 +1533,7 @@ a:active {
 }
 
 #reply-title:hover {
-  color: #604c40;
+  color: #604C40;
 }
 
 #commentform {
@@ -1594,15 +1594,15 @@ a:active {
 #colophon {
   font-size: 12px;
   padding: 20px 30px 5px;
-  background: #1c0f08;
-  color: #604c40;
+  background: #1C0F08;
+  color: #604C40;
   letter-spacing: -0.04em;
   text-transform: uppercase;
   font-family: "Raleway", sans-serif;
 }
 
 #colophon a {
-  color: white;
+  color: #ffffff;
 }
 
 .site-info {
@@ -1623,7 +1623,7 @@ a:active {
   line-height: 1;
   margin-left: 6px;
   padding-left: 6px;
-  border-left: 1px dotted #604c40;
+  border-left: 1px dotted #604C40;
 }
 
 .footer-navigation ul li:last-of-type {

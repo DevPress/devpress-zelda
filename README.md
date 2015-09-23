@@ -19,7 +19,7 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 
 ## Change Log
 
-1.1.3 (Development)
+1.1.3 (09/23/2015)
 ---
 
 * Update: Make function overrides easier from child themes

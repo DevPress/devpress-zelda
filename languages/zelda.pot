@@ -108,7 +108,7 @@ msgstr ""
 msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
-#: functions.php:119
+#: functions.php:120
 msgid "Sidebar"
 msgstr ""
 
@@ -184,129 +184,109 @@ msgstr ""
 msgid "You can hide site title or description under header options."
 msgstr ""
 
-#: inc/customizer-options.php:71
-msgid "Favicon"
-msgstr ""
-
-#: inc/customizer-options.php:75
-msgid ""
-"File must be <strong>.png</strong> format. Optimal dimensions: <strong>32px "
-"x 32px</strong>."
-msgstr ""
-
-#: inc/customizer-options.php:80
-msgid "Apple Touch Icon"
-msgstr ""
-
-#: inc/customizer-options.php:84
-msgid ""
-"File must be <strong>.png</strong> format. Optimal dimensions: "
-"<strong>152px x 152px</strong>."
-msgstr ""
-
-#: inc/customizer-options.php:92
+#: inc/customizer-options.php:74
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer-options.php:98
+#: inc/customizer-options.php:80
 msgid "Primary Accent Color"
 msgstr ""
 
-#: inc/customizer-options.php:107
+#: inc/customizer-options.php:89
 msgid "Outer Background Color"
 msgstr ""
 
-#: inc/customizer-options.php:116
+#: inc/customizer-options.php:98
 msgid "Outer Text Color"
 msgstr ""
 
-#: inc/customizer-options.php:125
+#: inc/customizer-options.php:107
 msgid "Outer Link Color"
 msgstr ""
 
-#: inc/customizer-options.php:137
+#: inc/customizer-options.php:119
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer-options.php:143
+#: inc/customizer-options.php:125
 msgid "Primary Font"
 msgstr ""
 
-#: inc/customizer-options.php:152
+#: inc/customizer-options.php:134
 msgid "Secondary Font"
 msgstr ""
 
-#: inc/customizer-options.php:161
+#: inc/customizer-options.php:143
 msgid "Tertiary Font"
 msgstr ""
 
-#: inc/customizer-options.php:171
+#: inc/customizer-options.php:153
 msgid "Google Font Subset"
 msgstr ""
 
-#: inc/customizer-options.php:172
+#: inc/customizer-options.php:154
 msgid "Not all fonts provide each of these subsets."
 msgstr ""
 
-#: inc/customizer-options.php:184
+#: inc/customizer-options.php:166
 msgid "Archive"
 msgstr ""
 
-#: inc/customizer-options.php:190
+#: inc/customizer-options.php:172
 msgid "Display Excerpts"
 msgstr ""
 
-#: inc/customizer-options.php:191
+#: inc/customizer-options.php:173
 msgid "Display excerpts instead of full content."
 msgstr ""
 
-#: inc/customizer-options.php:199 inc/customizer-options.php:280
+#: inc/customizer-options.php:181 inc/customizer-options.php:262
 msgid "Display Featured Images"
 msgstr ""
 
-#: inc/customizer-options.php:210
+#: inc/customizer-options.php:192
 msgid "Showcase"
 msgstr ""
 
-#: inc/customizer-options.php:216
+#: inc/customizer-options.php:198
 msgid "All Posts"
 msgstr ""
 
-#: inc/customizer-options.php:224
+#: inc/customizer-options.php:206
 msgid "Showcase Tag"
 msgstr ""
 
-#: inc/customizer-options.php:225
+#: inc/customizer-options.php:207
 msgid ""
 "This is for the \"Post Showcase\" template. Select \"All Posts\" to show "
 "the most recent five."
 msgstr ""
 
-#: inc/customizer-options.php:234
+#: inc/customizer-options.php:216
 msgid "Select Page"
 msgstr ""
 
-#: inc/customizer-options.php:243
+#: inc/customizer-options.php:225
 msgid "Showcase Pages"
 msgstr ""
 
-#: inc/customizer-options.php:244
+#: inc/customizer-options.php:226
 msgid "This is for the \"Page Showcase\" template. Select up to five."
 msgstr ""
 
-#: inc/customizer-options.php:266
+#: inc/customizer-options.php:248
 msgid "Post"
 msgstr ""
 
-#: inc/customizer-options.php:272
+#: inc/customizer-options.php:254
 msgid "Display Post Dates"
 msgstr ""
 
-#: inc/customizer-options.php:291
+#: inc/customizer-options.php:273
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer-options.php:297
+#: inc/customizer-options.php:279
 msgid "Footer Text"
 msgstr ""
 
@@ -350,7 +330,7 @@ msgstr ""
 msgid "%1$s by %2$s."
 msgstr ""
 
-#: inc/mods.php:123 inc/mods.php:134 templates/page-showcase.php:97
+#: inc/mods.php:103 inc/mods.php:114 templates/page-showcase.php:97
 #: templates/post-showcase.php:99
 msgid "Read More"
 msgstr ""
