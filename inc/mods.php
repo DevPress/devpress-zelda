@@ -94,26 +94,6 @@ function zelda_social_nav_class( $classes, $item ) {
 add_filter( 'nav_menu_css_class', 'zelda_social_nav_class', 10, 2 );
 
 /**
- * Display favicon and apple-touch logo in the head
- *
- * @since Zelda 0.1
- */
-if ( ! function_exists( 'zelda_display_favicons' ) ) :
-function zelda_display_favicons() {
-	$logo_favicon = get_theme_mod( 'logo-favicon' );
-	if ( ! empty( $logo_favicon ) ) : ?>
-		<link rel="icon" href="<?php echo esc_url( $logo_favicon ); ?>" />
-	<?php endif;
-
-	$logo_apple_touch = get_theme_mod( 'logo-apple-touch' );
-	if ( ! empty( $logo_apple_touch ) ) : ?>
-		<link rel="apple-touch-icon" href="<?php echo esc_url( $logo_apple_touch ); ?>" />
-	<?php endif;
-}
-endif;
-add_action( 'wp_head', 'zelda_display_favicons' );
-
-/**
  * Custom Read More
  *
  * @since Zelda 0.1

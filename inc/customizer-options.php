@@ -66,24 +66,6 @@ function zelda_options() {
 		'default' => '',
 	);
 
-	$options['logo-favicon'] = array(
-		'id' => 'logo-favicon',
-		'label'   => __( 'Favicon', 'zelda' ),
-		'section' => $section,
-		'type'    => 'upload',
-		'default' => '',
-		'description'  => __( 'File must be <strong>.png</strong> format. Optimal dimensions: <strong>32px x 32px</strong>.', 'zelda' ),
-	);
-
-	$options['logo-apple-touch'] = array(
-		'id' => 'logo-apple-touch',
-		'label'   => __( 'Apple Touch Icon', 'zelda' ),
-		'section' => $section,
-		'type'    => 'upload',
-		'default' => '',
-		'description'  => __( 'File must be <strong>.png</strong> format. Optimal dimensions: <strong>152px x 152px</strong>.', 'zelda' ),
-	);
-
 	// Colors
 	$section = 'colors';
 

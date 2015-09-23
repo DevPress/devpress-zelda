@@ -23,6 +23,7 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 ---
 
 * Update: Make function overrides easier from child themes
+* Update: Remove favicon options
 
 1.1.2 (07/16/2015)
 ---
