@@ -113,6 +113,7 @@ endif;
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
+if ( ! function_exists( 'zelda_widgets_init' ) ) :
 function zelda_widgets_init() {
 
 	register_sidebar( array(
@@ -126,12 +127,14 @@ function zelda_widgets_init() {
 	) );
 
 }
+endif;
 add_action( 'widgets_init', 'zelda_widgets_init' );
 
 /**
- * Enqueue fonts.
+ * Enqueue web fonts.
  */
-function zelda_fonts() {
+if ( ! function_exists( 'zelda_web_fonts' ) ) :
+function zelda_web_fonts() {
 
 	// Font options
 	$fonts = array();
@@ -145,15 +148,27 @@ function zelda_fonts() {
 	// Load Google Fonts
 	wp_enqueue_style( 'zelda-body-fonts', $font_uri, array(), null, 'screen' );
 
+}
+endif;
+add_action( 'wp_enqueue_scripts', 'zelda_web_fonts' );
+
+/**
+ * Enqueue icon font.
+ */
+if ( ! function_exists( 'zelda_icon_font' ) ) :
+function zelda_icon_font() {
+
 	// Icon Font
 	wp_enqueue_style( 'zelda-icons', get_template_directory_uri() . '/fonts/zelda-icons.css', array(), '1.0.0' );
 
 }
-add_action( 'wp_enqueue_scripts', 'zelda_fonts' );
+endif;
+add_action( 'wp_enqueue_scripts', 'zelda_icon_font' );
 
 /**
  * Enqueue scripts and styles.
  */
+if ( ! function_exists( 'zelda_scripts' ) ) :
 function zelda_scripts() {
 
 	wp_enqueue_style(
@@ -220,6 +235,7 @@ function zelda_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+endif;
 add_action( 'wp_enqueue_scripts', 'zelda_scripts' );
 
 /**
